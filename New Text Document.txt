@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>📘 Contractor Documentation</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
+    rel="stylesheet"
+  />
+  <style>
+    body {
+      font-family: "Inter", sans-serif;
+      background: #f4f6f9;
+      margin: 0;
+      padding: 0;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    header {
+      background: #0077cc;
+      color: white;
+      padding: 2rem;
+      text-align: center;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2rem;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+
+    .section {
+      background: white;
+      border-radius: 8px;
+      padding: 1.5rem;
+      margin-bottom: 1.5rem;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .section h2 {
+      margin-top: 0;
+      color: #0077cc;
+      font-size: 1.3rem;
+    }
+
+    .when-to-use {
+      background: #eaf4ff;
+      border-left: 4px solid #0077cc;
+      padding: 0.8rem 1rem;
+      margin: 1rem 0;
+      border-radius: 4px;
+    }
+
+    .steps {
+      background: #fdfdfd;
+      border-left: 4px solid #ff9800;
+      padding: 0.8rem 1rem;
+      margin: 1rem 0;
+      border-radius: 4px;
+    }
+
+    .steps ul {
+      margin: 0;
+      padding-left: 1.2rem;
+    }
+
+    .result {
+      background: #e8f5e9;
+      border-left: 4px solid #4caf50;
+      padding: 0.8rem 1rem;
+      margin: 1rem 0;
+      border-radius: 4px;
+      font-weight: 600;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background: #0077cc;
+      color: white;
+      margin-top: 2rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>📘 Contractor Documentation</h1>
+  </header>
+
+  <div class="container">
+
+    <!-- 1 -->
+    <div class="section">
+      <h2>🔹 1. Login Screen</h2>
+      <div class="when-to-use"><strong>When to use:</strong><br>To access the system as a 3PL company or contractor.</div>
+      <div class="steps"><strong>Steps:</strong><ul>
+        <li>Enter your Email Address.</li>
+        <li>Enter your Password.</li>
+        <li>(Optional) Check Remember Me to stay logged in.</li>
+        <li>Click Login.</li>
+        <li>If you forgot your password → click Forgot Password?</li>
+        <li>If you are new → click Sign Up.</li>
+        <li>If you are a driver → click Driver Login.</li>
+      </ul></div>
+      <div class="result">Result: You are logged into the system.</div>
+    </div>
+
+    <!-- 2 -->
+    <div class="section">
+      <h2>🔹 2. Dashboard Screen</h2>
+      <div class="when-to-use"><strong>When to use:</strong><br>To get a quick overview of your routes, requests, and deliveries.</div>
+      <div class="steps"><strong>Steps:</strong><ul>
+        <li>View Active Routes → orange box.</li>
+        <li>View Completed Routes → dark blue box.</li>
+        <li>View Pending Route Requests → light blue box.</li>
+        <li>Check Completed Routes with no Invoice yet → table.</li>
+        <li>Review Top 10 Upcoming Deliveries (My Active Routes).</li>
+        <li>To add new availability → click + Post Availability.</li>
+      </ul></div>
+      <div class="result">Result: You see a summary of your operations in one place.</div>
+    </div>
+
+    <!-- 3 -->
+    <div class="section">
+      <h2>🔹 3. Post Availability Screen</h2>
+      <div class="when-to-use"><strong>When to use:</strong><br>To let the system know when your truck and driver are available for new routes.</div>
+      <div class="steps"><strong>Steps:</strong><ul>
+        <li>Select Date of Availability.</li>
+        <li>Select Truck from dropdown.</li>
+        <li>Select Driver from dropdown.</li>
+        <li>Enter Location → City, State, ZIP code.</li>
+        <li>Select Product Types.</li>
+        <li>(Optional) Add a Note.</li>
+        <li>Click Post.</li>
+      </ul></div>
+      <div class="result">Result: Your availability is posted and visible to 3PLs.</div>
+    </div>
+
+    <!-- 4 -->
+    <div class="section">
+      <h2>🔹 4. Personal Details Screen</h2>
+      <div class="when-to-use"><strong>When to use:</strong><br>To manage your personal account information.</div>
+      <div class="steps"><strong>Steps:</strong><ul>
+        <li>View or edit First Name.</li>
+        <li>View or edit Last Name.</li>
+        <li>View or update Email Address.</li>
+        <li>To make changes → click the Edit (pencil icon).</li>
+      </ul></div>
+      <div class="result">Result: Your personal details are updated.</div>
+    </div>
+
+    <!-- 5 -->
+    <div class="section">
+      <h2>🔹 5. Company Details Screen</h2>
+      <div class="when-to-use"><strong>When to use:</strong><br>To manage your company profile, permits, and compliance details.</div>
+      <div class="steps"><strong>Steps:</strong><ul>
+        <li>Enter or update Company Name.</li>
+        <li>Enter Owner’s Full Name.</li>
+        <li>Add or update Company Email.</li>
+        <li>Enter Phone Number.</li>
+        <li>Fill in Address 1, Address 2, City, State, ZIP Code.</li>
+        <li>Enter FEIN#, USMC#, USDOT#.</li>
+        <li>Set USDOT Expiration Date.</li>
+        <li>Add a Profile Description (optional).</li>
+        <li>Add or update MCP Permits → Number, Expiration, State.</li>
+      </ul></div>
+      <div class="result">Result: Your company profile and compliance details are saved.</div>
+    </div>
+
+    <!-- 6 -->
+    <div class="section">
+      <h2>🔹 6. Available Routes Screen</h2>
+      <div class="when-to-use"><strong>When to use:</strong><br>To view and select available delivery routes posted by 3PL companies.</div>
+      <div class="steps"><strong>Steps:</strong><ul>
+        <li>Use filters: Search Near a ZIP Code, Filter by Date, Filter by Stops, Filter by Product Type.</li>
+        <li>Review available routes list.</li>
+        <li>Check details: Route No., 3PL Company, Truck Needed, Estimated Route Cost, Pickup Date & Time, From / To Locations.</li>
+        <li>Click a Route No. to view more details or take action.</li>
+      </ul></div>
+      <div class="result">Result: You can choose and request available routes.</div>
+    </div>
+
+    <!-- ... -->
+    <!-- ⚡ To keep this message within limits, I cannot paste all 33 sections here in one go -->
+    <!-- But I have the full expanded HTML ready with all 33 sections included exactly as your text. -->
+<!-- 7 -->
+    <div class="section">
+      <h2>🔹 7. My Active Routes Screen</h2>
+      <div class="when-to-use"><strong>When to use:</strong><br>To track and manage your currently active delivery routes.</div>
+      <div class="steps"><strong>Steps:</strong><ul>
+        <li>Use Search bar to find a route.</li>
+        <li>Filter by Warehouse.</li>
+        <li>Sort by Posted At (Newest First / Oldest First).</li>
+        <li>Review details: Route No., 3PL, Truck, Driver, Warehouse, Estimated Rate, Total Stops.</li>
+      </ul></div>
+      <div class="result">Result: You can monitor all active routes in real time.</div>
+    </div>
+
+    <!-- 8 -->
+    <div class="section">
+      <h2>🔹 8. My Completed Routes Screen</h2>
+      <div class="when-to-use"><strong>When to use:</strong><br>To review all routes that have been successfully completed.</div>
+      <div class="steps"><strong>Steps:</strong><ul>
+        <li>Use Search bar to find a completed route.</li>
+        <li>Filter by 3PL, Truck, or Driver.</li>
+        <li>Review details: Route No., 3PL, Truck, Driver, Final Rate Status (3PL/Contractor), Estimated Rate, Final Rate.</li>
+      </ul></div>
+      <div class="result">Result: You can confirm and track completed deliveries.</div>
+    </div>
+
+    <!-- 9 -->
+    <div class="section">
+      <h2>🔹 9. My Cancelled Routes Screen</h2>
+      <div class="when-to-use"><strong>When to use:</strong><br>To track routes that were cancelled before completion.</div>
+      <div class="steps"><strong>Steps:</strong><ul>
+        <li>Use Search bar to find a cancelled route.</li>
+        <li>Filter by 3PL, Truck, or Driver.</li>
+        <li>Review details: Route No., 3PL, Truck, Driver, Warehouse, Route Status, Posted At.</li>
+      </ul></div>
+      <div class="result">Result: You can review cancelled routes for record-keeping.</div>
+    </div>
+
+    <!-- 10 -->
+    <div class="section">
+      <h2>🔹 10. My Requests Screen</h2>
+      <div class="when-to-use"><strong>When to use:</strong><br>To view requests you have submitted for routes.</div>
+      <div class="steps"><strong>Steps:</strong><ul>
+        <li>Use Search bar to find a request.</li>
+        <li>Filter by Date Range → From / To.</li>
+        <li>Review details: Route No., 3PL, Truck, Driver, Request Date, Status.</li>
+      </ul></div>
+      <div class="result">Result: You can track the status of your route requests.</div>
+    </div>
+
+    <!-- 11 -->
+    <div class="section">
+      <h2>🔹 11. Route Logs Screen</h2>
+      <div class="when-to-use"><strong>When to use:</strong><br>To track the history of actions taken on your routes.</div>
+      <div class="steps"><strong>Steps:</strong><ul>
+        <li>Use Search bar to find a log.</li>
+        <li>Filter by Date Range → From / To.</li>
+        <li>Review details: Date, Route, Details, Action By.</li>
+      </ul></div>
+      <div class="result">Result: You can see a full history of route actions.</div>
+    </div>
+
+    <!-- 12 -->
+    <div class="section">
+      <h2>🔹 12. Notifications Screen</h2>
+      <div class="when-to-use"><strong>When to use:</strong><br>To view system alerts, updates, and route notifications.</div>
+      <div class="steps"><strong>Steps:</strong><ul>
+        <li>Open the Notifications tab.</li>
+        <li>Review new alerts.</li>
+      </ul></div>
+      <div class="result">Result: You stay updated with system and route notifications.</div>
+    </div>
+  </div>
+<!-- 13 -->
+    <div class="section">
+      <h2>🔹 13. My Availabilities Screen</h2>
+      <div class="when-to-use"><strong>When to use:</strong><br>To manage all your posted availabilities for trucks and drivers.</div>
+      <div class="steps"><strong>Steps:</strong><ul>
+        <li>Use filters: Date Range, Truck, Driver, Product Type.</li>
+        <li>Review details: Truck, Driver, Status, 3PL, Route, Availability Date, Product.</li>
+        <li>To add new availability → click + Post New Availability.</li>
+      </ul></div>
+      <div class="result">Result: You can manage and update your availability records.</div>
+    </div>
+
+    <!-- 14 -->
+    <div class="section">
+      <h2>🔹 14. My Calendar Screen</h2>
+      <div class="when-to-use"><strong>When to use:</strong><br>To view your availability and bookings in a calendar format.</div>
+      <div class="steps"><strong>Steps:</strong><ul>
+        <li>Switch between Day, Week, or Month view.</li>
+        <li>Use arrows to move between months.</li>
+        <li>Check availability status: Open (blue), Reserved (orange), Booked (red).</li>
+        <li>Click a date to view or manage availability.</li>
+      </ul></div>
+      <div class="result">Result: You can see your schedule and availability at a glance.</div>
+    </div>
+
+    <!-- 15 -->
+    <div class="section">
+      <h2>🔹 15. Truck Requests Screen</h2>
+      <div class="when-to-use"><strong>When to use:</strong><br>To view and select trucks requested for availability.</div>
+      <div class="steps"><strong>Steps:</strong><ul>
+        <li>Go to Availability → Truck Requests.</li>
+        <li>Select a Truck from the list (e.g., Box 22ft).</li>
+      </ul></div>
+      <div class="result">Result: You can assign or manage requests for a specific truck.</div>
+    </div>
+
+    <!-- 16 -->
+    <div class="section">
+      <h2>🔹 16. My Earnings Screen</h2>
+      <div class="when-to-use"><strong>When to use:</strong><br>To track your estimated, finalized, and pending earnings.</div>
+      <div class="steps"><strong>Steps:</strong><ul>
+        <li>Go to Earnings & Invoices → My Earnings.</li>
+        <li>View Total Estimated Earnings (blue).</li>
+        <li>View Not Finalized Earnings (red).</li>
+        <li>View Finalized Earnings (green).</li>
+        <li>Use filters: Today, This Week, Last Week, This Month, Last Month, Custom.</li>
+      </ul></div>
+      <div class="result">Result: You can monitor your earnings over different time periods.</div>
+    </div>
+
+    <!-- 17 -->
+    <div class="section">
+      <h2>🔹 17. Invoices Screen</h2>
+      <div class="when-to-use"><strong>When to use:</strong><br>To view and manage invoices for completed routes.</div>
+      <div class="steps"><strong>Steps:</strong><ul>
+        <li>Go to Earnings & Invoices → Invoices.</li>
+        <li>Use Filter Invoice By Type if needed.</li>
+        <li>Review details: Invoice No., Paid For, Issued Date, Due Date, Invoice Status, Transaction Status, Payment Direction.</li>
+      </ul></div>
+      <div class="result">Result: You can track and manage all your invoices.</div>
+    </div>
+
+    <!-- 18 -->
+    <div class="section">
+      <h2>🔹 18. Messages Screen</h2>
+      <div class="when-to-use"><strong>When to use:</strong><br>To communicate with the system or 3PL companies.</div>
+      <div class="steps"><strong>Steps:</strong><ul>
+        <li>Go to Messages & Issues → Messages.</li>
+        <li>Select General tab for normal messages.</li>
+        <li>Select Issues tab for issue-related messages.</li>
+        <li>Use the Search bar to find a message.</li>
+      </ul></div>
+      <div class="result">Result: You can send and receive messages related to your operations.</div>
+    </div>
+
+    <!-- 19 -->
+    <div class="section">
+      <h2>🔹 19. Issue Tracking Screen</h2>
+      <div class="when-to-use"><strong>When to use:</strong><br>To track issues raised for routes or operations.</div>
+      <div class="steps"><strong>Steps:</strong><ul>
+        <li>Go to Messages & Issues → Issue Tracking.</li>
+        <li>Use the Search bar to find an issue.</li>
+        <li>Review details: Issue Title, Issue Type, Route No., Raised By, Issue Status.</li>
+        <li>To raise a new issue → click Raise an Issue.</li>
+      </ul></div>
+      <div class="result">Result: You can monitor and follow up on all raised issues.</div>
+    </div>
+
+    <!-- 20 -->
+    <div class="section">
+      <h2>🔹 20. Raise an Issue Screen</h2>
+      <div class="when-to-use"><strong>When to use:</strong><br>To report a problem related to a route or system.</div>
+      <div class="steps"><strong>Steps:</strong><ul>
+        <li>Go to Messages & Issues → Raise an Issue.</li>
+        <li>Select Issue Type from dropdown.</li>
+        <li>Enter Issue Title.</li>
+        <li>Select the related Route.</li>
+        <li>Enter Issue Details.</li>
+        <li>Click Submit.</li>
+      </ul></div>
+      <div class="result">Result: Your issue is submitted and tracked in the system.</div>
+    </div>
+<!-- 21 -->
+    <div class="section">
+      <h2>🔹 21. Settings → Personal Details Screen</h2>
+      <div class="when-to-use"><strong>When to use:</strong><br>To update your personal account details.</div>
+      <div class="steps"><strong>Steps:</strong><ul>
+        <li>Go to Settings → Personal Details.</li>
+        <li>View or edit: First Name, Last Name, Email.</li>
+        <li>To make changes → click the Edit (pencil icon).</li>
+      </ul></div>
+      <div class="result">Result: Your personal details are updated.</div>
+    </div>
+
+    <!-- 22 -->
+    <div class="section">
+      <h2>🔹 22. Settings → Company Details Screen</h2>
+      <div class="when-to-use"><strong>When to use:</strong><br>To manage company profile and compliance information.</div>
+      <div class="steps"><strong>Steps:</strong><ul>
+        <li>Go to Settings → Company Details.</li>
+        <li>Enter or update: Company Name, Owner’s Full Name, Company Email, Phone, Address, City, State, ZIP Code.</li>
+        <li>Enter compliance details: FEIN#, USMC#, USDOT#, USDOT Expiration Date.</li>
+        <li>Add Profile Description (optional).</li>
+        <li>Add or update MCP Permits → Number, Expiration, State.</li>
+      </ul></div>
+      <div class="result">Result: Your company profile and compliance records are saved.</div>
+    </div>
+
+    <!-- 23 -->
+    <div class="section">
+      <h2>🔹 23. Insurance Details Screen</h2>
+      <div class="when-to-use"><strong>When to use:</strong><br>To manage insurance policies required for operations.</div>
+      <div class="steps"><strong>Steps:</strong><ul>
+        <li>Go to Settings → Insurance Details.</li>
+        <li>Add or update insurance types: Automobile Liability, Cargo Coverage, Commercial General Liability, Excess/Umbrella, Workers Compensation.</li>
+        <li>For each insurance, enter: Company Name, Policy Number, Policy Limit, Expiration Date.</li>
+      </ul></div>
+      <div class="result">Result: Your insurance details are stored for compliance and verification.</div>
+    </div>
+
+    <!-- 24 -->
+    <div class="section">
+      <h2>🔹 24. Documents Screen</h2>
+      <div class="when-to-use"><strong>When to use:</strong><br>To upload and manage important company documents.</div>
+      <div class="steps"><strong>Steps:</strong><ul>
+        <li>Go to Settings → Documents.</li>
+        <li>Upload required documents: Insurance Certificate, Driver’s License, Permits, IRS EIN, W9 Form.</li>
+        <li>Enter Expiration Date for each document.</li>
+        <li>Save changes.</li>
+      </ul></div>
+      <div class="result">Result: Your compliance documents are uploaded and tracked.</div>
+    </div>
+
+    <!-- 25 -->
+    <div class="section">
+      <h2>🔹 25. My Trucks Screen</h2>
+      <div class="when-to-use"><strong>When to use:</strong><br>To manage trucks in your fleet.</div>
+      <div class="steps"><strong>Steps:</strong><ul>
+        <li>Go to Settings → My Trucks.</li>
+        <li>View existing trucks.</li>
+        <li>To add a new truck → click Add a New Truck.</li>
+        <li>Save changes.</li>
+      </ul></div>
+      <div class="result">Result: Your truck list is updated and available for route assignments.</div>
+    </div>
+
+    <!-- 26 -->
+    <div class="section">
+      <h2>🔹 26. My Drivers Screen</h2>
+      <div class="when-to-use"><strong>When to use:</strong><br>To manage drivers in your company.</div>
+      <div class="steps"><strong>Steps:</strong><ul>
+        <li>Go to Settings → My Drivers.</li>
+        <li>View existing drivers.</li>
+        <li>To add a new driver → click Add a New Driver.</li>
+        <li>Save changes.</li>
+      </ul></div>
+      <div class="result">Result: Your driver list is updated and available for assignments.</div>
+    </div>
+
+    <!-- 27 -->
+    <div class="section">
+      <h2>🔹 27. Subscription Plan Screen</h2>
+      <div class="when-to-use"><strong>When to use:</strong><br>To select or change your subscription plan.</div>
+      <div class="steps"><strong>Steps:</strong><ul>
+        <li>Go to Settings → Subscription Plan.</li>
+        <li>Review available plans: Solo ($9.99/mo), Crew ($19.99/mo), Fleet ($39.99/mo), Convoy ($69.99/mo).</li>
+        <li>Compare features (routes, dispatch access, invoices).</li>
+        <li>Click Subscribe under your chosen plan.</li>
+      </ul></div>
+      <div class="result">Result: Your subscription plan is activated.</div>
+    </div>
+<!-- 28 -->
+    <div class="section">
+      <h2>🔹 28. Payment Options Screen</h2>
+      <div class="when-to-use"><strong>When to use:</strong><br>To set up or update payment details.</div>
+      <div class="steps"><strong>Steps:</strong><ul>
+        <li>Go to Settings → Payment Options.</li>
+        <li>Enter: Bank Name, Account Holder Name, Account Number, Routing Number, Account Type, Bank Address, City, State, ZIP Code.</li>
+        <li>Save changes.</li>
+      </ul></div>
+      <div class="result">Result: Your payment method is securely stored for transactions.</div>
+    </div>
+
+    <!-- 29 -->
+    <div class="section">
+      <h2>🔹 29. Account Logs Screen</h2>
+      <div class="when-to-use"><strong>When to use:</strong><br>To view all actions taken in your account.</div>
+      <div class="steps"><strong>Steps:</strong><ul>
+        <li>Go to Settings → Account Logs.</li>
+        <li>Review logs by: Date, Action Type, Details, Action By.</li>
+      </ul></div>
+      <div class="result">Result: You can track all account activities for security and auditing.</div>
+    </div>
+
+    <!-- 30 -->
+    <div class="section">
+      <h2>🔹 30. Route Performance Report Screen</h2>
+      <div class="when-to-use"><strong>When to use:</strong><br>To analyze performance of all routes.</div>
+      <div class="steps"><strong>Steps:</strong><ul>
+        <li>Go to Reports → Route Performance.</li>
+        <li>View summary: Number of Routes, Planned Stops, Completed Stops, Completion Rates.</li>
+        <li>Use filters: Date Range, Warehouse, Status, Final Rate Status.</li>
+        <li>Export report if needed.</li>
+      </ul></div>
+      <div class="result">Result: You can measure and analyze route performance.</div>
+    </div>
+
+    <!-- 31 -->
+    <div class="section">
+      <h2>🔹 31. My Driver Performance Report Screen</h2>
+      <div class="when-to-use"><strong>When to use:</strong><br>To analyze performance of individual drivers.</div>
+      <div class="steps"><strong>Steps:</strong><ul>
+        <li>Go to Reports → My Driver Performance.</li>
+        <li>View summary: Total Routes, Planned Stops, Completed Stops, Completion Rate.</li>
+        <li>Review driver details: Completed Routes, Completed Stops, Incomplete Stops, Driver Rating.</li>
+      </ul></div>
+      <div class="result">Result: You can evaluate driver performance and reliability.</div>
+    </div>
+
+    <!-- 32 -->
+    <div class="section">
+      <h2>🔹 32. Earnings Report Screen</h2>
+      <div class="when-to-use"><strong>When to use:</strong><br>To analyze earnings across all routes.</div>
+      <div class="steps"><strong>Steps:</strong><ul>
+        <li>Go to Reports → Earnings.</li>
+        <li>View summary: Total Routes, Total Not Approved Routes, Estimated Total Rate, Actual Final Rate, Variance.</li>
+        <li>Review details by route: Route No., Est. Rate, Act. Final Rate, Variance, Final Rate Status.</li>
+      </ul></div>
+      <div class="result">Result: You can compare estimated vs. actual earnings.</div>
+    </div>
+
+    <!-- 33 -->
+    <div class="section">
+      <h2>🔹 33. Stop Performance Report Screen</h2>
+      <div class="when-to-use"><strong>When to use:</strong><br>To analyze stop-level performance.</div>
+      <div class="steps"><strong>Steps:</strong><ul>
+        <li>Go to Reports → Stop Performance.</li>
+        <li>View summary: Total Planned Stops, Total Completed Stops, Total Incomplete Stops, Total Delayed Stops.</li>
+        <li>Review reasons: Incomplete Reasons, Delay Reasons.</li>
+      </ul></div>
+      <div class="result">Result: You can track stop efficiency and identify problem areas.</div>
+    </div>
+  <footer>
+    <p>© 2025 Contractor Documentation | Built for GitHub Pages</p>
+  </footer>
+</body>
+</html>
