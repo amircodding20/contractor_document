@@ -88,7 +88,51 @@
       color: white;
       margin-top: 2rem;
     }
+
+    /* Reset all text to regular (not angled, italic, or skewed) */
+    body, h1, h2, h3, h4, h5, h6, p, ul, li, footer, header, .section, .when-to-use, .steps, .result {
+      font-style: normal;   /* no italic */
+      font-weight: 400;     /* regular weight */
+      text-align: left;     /* normal alignment */
+      transform: none;      /* no rotation/skew */
+    }
   </style>
+</head>
+<body>
+  <header>
+    <h1>📘 Contractor Documentation</h1>
+  </header>
+
+  <div class="container">
+    <div class="section">
+      <h2>Introduction</h2>
+      <p>This is the contractor documentation with clear steps and guidelines.</p>
+    </div>
+
+    <div class="section when-to-use">
+      <h2>When to Use</h2>
+      <p>Use this guide whenever you need structured instructions.</p>
+    </div>
+
+    <div class="section steps">
+      <h2>Steps</h2>
+      <ul>
+        <li>Read carefully</li>
+        <li>Follow instructions</li>
+        <li>Check results</li>
+      </ul>
+    </div>
+
+    <div class="section result">
+      <h2>Result</h2>
+      <p>You will achieve the expected outcome.</p>
+    </div>
+  </div>
+
+  
+</body>
+</html>
+
 </head>
 <body>
   <header>
@@ -113,35 +157,104 @@
       <div class="result">Result: You are logged into the system.</div>
     </div>
 
-    <!-- 2 -->
+  <!-- 2 -->
     <div class="section">
       <h2>🔹 2. Dashboard Screen</h2>
-      <div class="when-to-use"><strong>When to use:</strong><br>To get a quick overview of your routes, requests, and deliveries.</div>
-      <div class="steps"><strong>Steps:</strong><ul>
-        <li>View Active Routes → orange box.</li>
-        <li>View Completed Routes → dark blue box.</li>
-        <li>View Pending Route Requests → light blue box.</li>
-        <li>Check Completed Routes with no Invoice yet → table.</li>
-        <li>Review Top 10 Upcoming Deliveries (My Active Routes).</li>
-        <li>To add new availability → click + Post Availability.</li>
-      </ul></div>
-      <div class="result">Result: You see a summary of your operations in one place.</div>
+      <div class="when-to-use">
+        <strong>When to use:</strong><br>
+        To get a quick overview of your routes, requests, and deliveries.
+      </div>
+      <div class="steps">
+        <strong>Steps (with explanation):</strong>
+        <ul>
+          <li>
+            <strong>View Active Routes → orange box</strong><br>
+            <em>What is this?</em> Shows the number of routes currently in progress.<br>
+            <em>How it works?</em> Updates automatically when you accept and start a route.
+          </li>
+          <li>
+            <strong>View Completed Routes → dark blue box</strong><br>
+            <em>What is this?</em> Shows the number of routes you have finished.<br>
+            <em>How it works?</em> Once a driver marks a route as completed, it appears here.
+          </li>
+          <li>
+            <strong>View Pending Route Requests → light blue box</strong><br>
+            <em>What is this?</em> Shows how many route offers are waiting for your response.<br>
+            <em>How it works?</em> When a 3PL posts a route that matches your availability, it shows up here until you accept or reject it.
+          </li>
+          <li>
+            <strong>Check Completed Routes with no Invoice yet → table</strong><br>
+            <em>What is this?</em> A list of finished routes that still don’t have invoices generated.<br>
+            <em>How it works?</em> Once you complete a route, it stays here until you or the system creates an invoice.
+          </li>
+          <li>
+            <strong>Review Top 10 Upcoming Deliveries (My Active Routes)</strong><br>
+            <em>What is this?</em> A preview of your next 10 deliveries.<br>
+            <em>How it works?</em> Pulls data from your active routes and shows the most urgent ones first.
+          </li>
+          <li>
+            <strong>To add new availability → click + Post Availability</strong><br>
+            <em>What is this?</em> A button to tell the system when your truck/driver is free.<br>
+            <em>How it works?</em> Opens the “Post Availability” form where you select truck, driver, date, and location.
+          </li>
+        </ul>
+      </div>
+      <div class="result">
+        Result: You see a summary of your operations in one place — active jobs, completed jobs, pending offers, and upcoming deliveries.
+      </div>
     </div>
 
-    <!-- 3 -->
+   <!-- 3 -->
     <div class="section">
       <h2>🔹 3. Post Availability Screen</h2>
-      <div class="when-to-use"><strong>When to use:</strong><br>To let the system know when your truck and driver are available for new routes.</div>
-      <div class="steps"><strong>Steps:</strong><ul>
-        <li>Select Date of Availability.</li>
-        <li>Select Truck from dropdown.</li>
-        <li>Select Driver from dropdown.</li>
-        <li>Enter Location → City, State, ZIP code.</li>
-        <li>Select Product Types.</li>
-        <li>(Optional) Add a Note.</li>
-        <li>Click Post.</li>
-      </ul></div>
-      <div class="result">Result: Your availability is posted and visible to 3PLs.</div>
+      <div class="when-to-use">
+        <strong>When to use:</strong><br>
+        To let the system know when your truck and driver are available for new routes.
+      </div>
+      <div class="steps">
+        <strong>Steps (with explanation):</strong>
+        <ul>
+          <li>
+            <strong>Select Date of Availability</strong><br>
+            <em>What is this?</em> The date when your truck and driver are free to take a job.<br>
+            <em>How it works?</em> The system will only match you with routes starting on or after this date.
+          </li>
+          <li>
+            <strong>Select Truck from dropdown</strong><br>
+            <em>What is this?</em> Choose which truck you want to make available.<br>
+            <em>How it works?</em> The system checks the truck’s size/type (e.g., Box 22ft) and matches it with routes that require that truck type.
+          </li>
+          <li>
+            <strong>Select Driver from dropdown</strong><br>
+            <em>What is this?</em> Assign a driver to the truck.<br>
+            <em>How it works?</em> The driver’s name will be linked to the availability, so 3PLs know who will operate the truck.
+          </li>
+          <li>
+            <strong>Enter Location → City, State, ZIP code</strong><br>
+            <em>What is this?</em> The starting point where the truck/driver will be available.<br>
+            <em>How it works?</em> Routes are matched based on this location. If a 3PL has a pickup near this area, your availability will show up.
+          </li>
+          <li>
+            <strong>Select Product Types</strong><br>
+            <em>What is this?</em> The type of goods you can transport (e.g., Furniture, Electronics, General Cargo).<br>
+            <em>How it works?</em> Ensures you only get matched with routes carrying products you can handle.
+          </li>
+        
+          <li>
+            <strong>Click Post</strong><br>
+            <em>What is this?</em> The action to publish your availability.<br>
+            <em>How it works?</em> Once posted, your availability is visible to 3PLs in the system.
+          </li>
+        </ul>
+      </div>
+      <div class="result">
+        Result: Your availability is posted and visible to 3PLs, allowing them to assign you to matching routes.
+      </div>
+      <div class="when-to-use">
+        <strong>Who should see this post and where?</strong><br>
+        <em>Who?</em> 3PL companies (logistics providers) who are looking for available trucks and drivers.<br>
+        <em>Where?</em> In their <strong>Available Contractors/Trucks list</strong> inside the 3PL portal, filtered by location, date, truck type, and product type.
+      </div>
     </div>
 
     <!-- 4 -->
@@ -157,292 +270,1241 @@
       <div class="result">Result: Your personal details are updated.</div>
     </div>
 
-    <!-- 5 -->
+   <!-- 5 -->
     <div class="section">
       <h2>🔹 5. Company Details Screen</h2>
-      <div class="when-to-use"><strong>When to use:</strong><br>To manage your company profile, permits, and compliance details.</div>
-      <div class="steps"><strong>Steps:</strong><ul>
-        <li>Enter or update Company Name.</li>
-        <li>Enter Owner’s Full Name.</li>
-        <li>Add or update Company Email.</li>
-        <li>Enter Phone Number.</li>
-        <li>Fill in Address 1, Address 2, City, State, ZIP Code.</li>
-        <li>Enter FEIN#, USMC#, USDOT#.</li>
-        <li>Set USDOT Expiration Date.</li>
-        <li>Add a Profile Description (optional).</li>
-        <li>Add or update MCP Permits → Number, Expiration, State.</li>
-      </ul></div>
-      <div class="result">Result: Your company profile and compliance details are saved.</div>
+      <div class="when-to-use">
+        <strong>When to use:</strong><br>
+        To manage your company profile, permits, and compliance details required for operating as a contractor in the U.S.
+      </div>
+      <div class="steps">
+        <strong>Steps (with explanation):</strong>
+        <ul>
+          <li>
+            <strong>Company Name</strong><br>
+            <em>What is this?</em> The legal or registered name of your company.<br>
+            <em>How it works?</em> This name will appear on invoices, contracts, and in the 3PL system when they see your profile.
+          </li>
+          <li>
+            <strong>Owner’s Full Name</strong><br>
+            <em>What is this?</em> The full legal name of the company owner.<br>
+            <em>How it works?</em> Used for verification and compliance. It links the business to a responsible person.
+          </li>
+          <li>
+            <strong>Company Email</strong><br>
+            <em>What is this?</em> The official email address for your company.<br>
+            <em>How it works?</em> All system notifications, invoices, and route confirmations are sent here.
+          </li>
+          <li>
+            <strong>Phone</strong><br>
+            <em>What is this?</em> The main contact number for your company.<br>
+            <em>How it works?</em> 3PLs or the system may call this number for urgent route updates or verification.
+          </li>
+          <li>
+            <strong>Address 1 / Address 2 / City / State / ZIP Code</strong><br>
+            <em>What is this?</em> Your company’s physical address.<br>
+            <em>How it works?</em> Used for compliance, billing, and matching routes near your location.<br>
+            <em>Note:</em> In the U.S., the ZIP Code is a 5-digit postal code (e.g., 90210).
+          </li>
+          <li>
+            <strong>FEIN# (Federal Employer Identification Number)</strong><br>
+            <em>What is this?</em> A unique 9-digit number issued by the IRS to identify your business for tax purposes.<br>
+            <em>How it works?</em> Required for U.S. companies to operate legally, pay taxes, and issue invoices.<br>
+            <em>Example:</em> 12-3456789
+          </li>
+          <li>
+            <strong>USMC# (Motor Carrier Number)</strong><br>
+            <em>What is this?</em> A number issued by the FMCSA (Federal Motor Carrier Safety Administration) for companies that transport goods across state lines.<br>
+            <em>How it works?</em> Identifies your company as a registered motor carrier.<br>
+            <em>Example:</em> MC-123456
+          </li>
+          <li>
+            <strong>USDOT# (U.S. Department of Transportation Number)</strong><br>
+            <em>What is this?</em> A unique number issued by the U.S. Department of Transportation.<br>
+            <em>How it works?</em> Required for any company that operates commercial vehicles across state lines. It tracks safety records, inspections, and compliance.<br>
+            <em>Example:</em> 1234567
+          </li>
+          <li>
+            <strong>USDOT Expiration Date</strong><br>
+            <em>What is this?</em> The date when your USDOT registration expires.<br>
+            <em>How it works?</em> You must renew before this date to stay compliant. The system may warn you if it’s close to expiration.
+          </li>
+          <li>
+            <strong>Profile Description</strong><br>
+            <em>What is this?</em> A short description of your company (e.g., “We specialize in furniture delivery across Midwest states”).<br>
+            <em>How it works?</em> Helps 3PLs understand your services and strengths.
+          </li>
+          <li>
+            <strong>MCP Permits (Motor Carrier Permits)</strong><br>
+            <em>What is this?</em> State-level permits required for operating commercial trucks in certain states (e.g., California MCP).<br>
+            <em>How it works?</em> You can add multiple permits with their number, expiration date, and state.<br>
+            <em>Example:</em> MCP #12345, Expiration: 2025-08-18, State: CA
+          </li>
+        </ul>
+      </div>
+      <div class="result">
+        Result: Your company profile is complete and compliant. 3PLs can see your verified details, and the system ensures you meet U.S. regulations for trucking and logistics.
+      </div>
     </div>
 
-    <!-- 6 -->
+<!-- 6 -->
     <div class="section">
       <h2>🔹 6. Available Routes Screen</h2>
-      <div class="when-to-use"><strong>When to use:</strong><br>To view and select available delivery routes posted by 3PL companies.</div>
-      <div class="steps"><strong>Steps:</strong><ul>
-        <li>Use filters: Search Near a ZIP Code, Filter by Date, Filter by Stops, Filter by Product Type.</li>
-        <li>Review available routes list.</li>
-        <li>Check details: Route No., 3PL Company, Truck Needed, Estimated Route Cost, Pickup Date & Time, From / To Locations.</li>
-        <li>Click a Route No. to view more details or take action.</li>
-      </ul></div>
-      <div class="result">Result: You can choose and request available routes.</div>
+      <div class="when-to-use">
+        <strong>When to use:</strong><br>
+        To view and select available delivery routes posted by 3PL companies.
+      </div>
+      <div class="steps">
+        <strong>Steps (with explanation):</strong>
+        <ul>
+          <li>
+            <strong>Search Near a ZIP Code</strong><br>
+            <em>What is this?</em> A search box where you can enter a U.S. ZIP Code (postal code).<br>
+            <em>How it works?</em> The system shows only routes that start or pass near that ZIP Code.<br>
+            <em>Example:</em> Enter 90210 → you’ll see routes near Beverly Hills, CA.
+          </li>
+          <li>
+            <strong>Filter by Date</strong><br>
+            <em>What is this?</em> A filter to show routes available on a specific date.<br>
+            <em>How it works?</em> If you’re only free on Sept 10, you can filter to see jobs starting that day.
+          </li>
+          <li>
+            <strong>Filter by Stops</strong><br>
+            <em>What is this?</em> Lets you filter routes by the number of delivery stops.<br>
+            <em>How it works?</em> If you want short/simple jobs, you can choose routes with fewer stops.
+          </li>
+          <li>
+            <strong>Filter by Product Type</strong><br>
+            <em>What is this?</em> A dropdown to filter by the type of goods (e.g., Furniture, Electronics, General Cargo).<br>
+            <em>How it works?</em> Ensures you only see jobs that match your truck’s cargo capability.
+          </li>
+         
+          <li>
+            <strong>Click a Route No. to view more details or take action</strong><br>
+            <em>What is this?</em> The link to open the full route details.<br>
+            <em>How it works?</em> You can see stops, rates, and accept/reject the job.
+          </li>
+        </ul>
+      </div>
+      <div class="result">
+        Result: You can browse, filter, and select delivery routes that match your truck, driver, and availability.
+      </div>
     </div>
 
-    <!-- ... -->
-    <!-- ⚡ To keep this message within limits, I cannot paste all 33 sections here in one go -->
-    <!-- But I have the full expanded HTML ready with all 33 sections included exactly as your text. -->
+    <!-- Route Details -->
+    <div class="section">
+      <h2>🔹 A. Route Details Tab</h2>
+      <div class="when-to-use">
+        <strong>When to use:</strong><br>
+        To view all the main information about a specific route before deciding to accept it.
+      </div>
+      <div class="steps">
+        <strong>Fields (with explanation):</strong>
+        <ul>
+          <li><strong>Route Number</strong><br><em>What is this?</em> A unique system-generated ID for the route.<br><em>How it works?</em> Used to track and reference the route in the system.</li>
+          <li><strong>Custom Route ID</strong><br><em>What is this?</em> An ID provided by the 3PL.<br><em>How it works?</em> Helps the 3PL match this job with their own system records.</li>
+          <li><strong>Warehouse ID</strong><br><em>What is this?</em> The warehouse or client name where the route starts.<br><em>How it works?</em> Identifies the pickup warehouse.</li>
+          <li><strong>Truck Size Needed</strong><br><em>What is this?</em> The required truck size/type.<br><em>How it works?</em> Only contractors with matching trucks can accept this job.</li>
+          <li><strong>Payment Method</strong><br><em>What is this?</em> How you will be paid.<br><em>How it works?</em> Confirms who is responsible for payment.</li>
+          <li><strong>Route Rate Based On</strong><br><em>What is this?</em> Whether the rate is fixed or estimated.<br><em>How it works?</em> If adjustable, the final rate may change after completion.</li>
+          <li><strong>Estimated Route Rate</strong><br><em>What is this?</em> The expected payout for the route.<br><em>How it works?</em> Gives you an idea of earnings before accepting.</li>
+          <li><strong>Product Type(s)</strong><br><em>What is this?</em> The type of goods being transported.<br><em>How it works?</em> Ensures you only accept jobs your truck can handle.</li>
+          <li><strong>Number of Total Pieces</strong><br><em>What is this?</em> The total number of items to be delivered.<br><em>How it works?</em> Helps you plan truck space and time.</li>
+          <li><strong>Number of Stops</strong><br><em>What is this?</em> How many delivery stops are included.<br><em>How it works?</em> More stops usually mean more time and effort.</li>
+          <li><strong>Pickup Date & Time</strong><br><em>What is this?</em> When the job starts.<br><em>How it works?</em> You must be at the pickup location at this time.</li>
+          <li><strong>Pickup Location</strong><br><em>What is this?</em> The city/state where the route begins.<br><em>How it works?</em> This is where you collect the goods.</li>
+          <li><strong>Furthest Location</strong><br><em>What is this?</em> The farthest delivery point on the route.<br><em>How it works?</em> Helps you understand the maximum distance.</li>
+          <li><strong>Total Distance in Miles (Round Trip)</strong><br><em>What is this?</em> The total driving distance for the route.<br><em>How it works?</em> Useful for fuel planning and time estimation.</li>
+          <li><strong>Is 3-Man Team Needed?</strong><br><em>What is this?</em> Whether the job requires 3 workers.<br><em>How it works?</em> If yes, you must provide extra manpower.</li>
+          <li><strong>Distance Pay?</strong><br><em>What is this?</em> Extra pay for long-distance jobs.<br><em>How it works?</em> If enabled, you’ll get additional compensation per mile.</li>
+          <li><strong>Notes</strong><br><em>What is this?</em> Extra instructions from the 3PL.<br><em>How it works?</em> May include delivery rules, customer requests, or special handling.</li>
+          <li><strong>Send Request Button</strong><br><em>What is this?</em> The button to apply for this route.<br><em>How it works?</em> Once clicked, your request goes to the 3PL for approval.</li>
+        </ul>
+      </div>
+      <div class="result">
+        Result: You can review all route details and decide whether to request the job.
+      </div>
+    </div>
+
+    <!-- Stop Details -->
+    <div class="section">
+      <h2>🔹 B. Stop Details Tab</h2>
+      <div class="when-to-use">
+        <strong>When to use:</strong><br>
+        To view the list of delivery stops included in the route.
+      </div>
+      <div class="steps">
+        <strong>Fields (with explanation):</strong>
+        <ul>
+          <li><strong>Stop #</strong><br><em>What is this?</em> The sequence number of the stop.<br><em>How it works?</em> Shows the order in which deliveries must be made.</li>
+          <li><strong>Items</strong><br><em>What is this?</em> The goods to be delivered at that stop.<br><em>How it works?</em> Helps you prepare for unloading.</li>
+          <li><strong>Address</strong><br><em>What is this?</em> The delivery location for that stop.<br><em>How it works?</em> You must follow this address for delivery.</li>
+          <li><strong>Actions</strong><br><em>What is this?</em> Options to view or manage the stop.<br><em>How it works?</em> May include confirming delivery or reporting issues.</li>
+          <li><strong>Warehouse Arrival and Return</strong><br><em>What is this?</em> A note that the system automatically includes the warehouse arrival and return trip.<br><em>How it works?</em> You don’t need to manually add the warehouse as a stop — it’s already factored in.</li>
+        </ul>
+      </div>
+      <div class="result">
+        Result: You can see all delivery stops, addresses, and items for the route.
+      </div>
+    </div>
+
+
 <!-- 7 -->
+  <!-- 7 -->
     <div class="section">
       <h2>🔹 7. My Active Routes Screen</h2>
-      <div class="when-to-use"><strong>When to use:</strong><br>To track and manage your currently active delivery routes.</div>
-      <div class="steps"><strong>Steps:</strong><ul>
-        <li>Use Search bar to find a route.</li>
-        <li>Filter by Warehouse.</li>
-        <li>Sort by Posted At (Newest First / Oldest First).</li>
-        <li>Review details: Route No., 3PL, Truck, Driver, Warehouse, Estimated Rate, Total Stops.</li>
-      </ul></div>
-      <div class="result">Result: You can monitor all active routes in real time.</div>
+      <div class="when-to-use">
+        <strong>When to use:</strong><br>
+        To track and manage your currently active delivery routes.
+      </div>
+      <div class="steps">
+        <strong>Fields (with explanation):</strong>
+        <ul>
+          <li>
+            <strong>Actions</strong><br>
+            <em>What is this?</em> A menu (⋮ three dots) for each route.<br>
+            <em>How it works?</em> Lets you view details, update status, or cancel the route if needed.
+          </li>
+          <li>
+            <strong>Route No.</strong><br>
+            <em>What is this?</em> A unique ID for the route (e.g., RT1087).<br>
+            <em>How it works?</em> Clickable link → opens the full route details (pickup, stops, rate, etc.).
+          </li>
+          <li>
+            <strong>3PL</strong><br>
+            <em>What is this?</em> The logistics company that posted the job.<br>
+            <em>How it works?</em> Identifies who you are working for (e.g., KTI, G Logistics).
+          </li>
+          <li>
+            <strong>Truck</strong><br>
+            <em>What is this?</em> The truck assigned to this route.<br>
+            <em>How it works?</em> Shows which of your trucks is being used (e.g., Box 22ft).
+          </li>
+          <li>
+            <strong>Driver</strong><br>
+            <em>What is this?</em> The driver assigned to the truck.<br>
+            <em>How it works?</em> Confirms who is responsible for completing the deliveries.
+          </li>
+          <li>
+            <strong>Warehouse</strong><br>
+            <em>What is this?</em> The warehouse or starting point for the route.<br>
+            <em>How it works?</em> Identifies where the goods are picked up.
+          </li>
+          <li>
+            <strong>Est. Rate (Estimated Rate)</strong><br>
+            <em>What is this?</em> The expected payout for the route.<br>
+            <em>How it works?</em> Shows how much you will earn (before adjustments).
+          </li>
+          <li>
+            <strong>Total Stops</strong><br>
+            <em>What is this?</em> The number of delivery stops in the route.<br>
+            <em>How it works?</em> Helps you estimate time and effort required.
+          </li>
+          <li>
+            <strong>Route Status</strong><br>
+            <em>What is this?</em> The current progress of the route (e.g., Active, In Progress, Pending Completion).<br>
+            <em>How it works?</em> Updates automatically as the driver moves through the route.
+          </li>
+        </ul>
+      </div>
+      <div class="result">
+        Result: This screen shows all routes that are currently active and not yet completed. 
+        These routes are pending to complete until the driver finishes all stops and marks them as completed.
+      </div>
     </div>
 
     <!-- 8 -->
+ <!-- 8 -->
     <div class="section">
       <h2>🔹 8. My Completed Routes Screen</h2>
-      <div class="when-to-use"><strong>When to use:</strong><br>To review all routes that have been successfully completed.</div>
-      <div class="steps"><strong>Steps:</strong><ul>
-        <li>Use Search bar to find a completed route.</li>
-        <li>Filter by 3PL, Truck, or Driver.</li>
-        <li>Review details: Route No., 3PL, Truck, Driver, Final Rate Status (3PL/Contractor), Estimated Rate, Final Rate.</li>
-      </ul></div>
-      <div class="result">Result: You can confirm and track completed deliveries.</div>
+      <div class="when-to-use">
+        <strong>When to use:</strong><br>
+        To review all routes that have been successfully completed.
+      </div>
+      <div class="steps">
+        <strong>Fields (with explanation):</strong>
+        <ul>
+          <li>
+            <strong>Actions</strong><br>
+            <em>What is this?</em> A menu (⋮ three dots) for each completed route.<br>
+            <em>How it works?</em> Lets you view details, download reports, or check invoices related to that route.
+          </li>
+          <li>
+            <strong>Route No.</strong><br>
+            <em>What is this?</em> A unique ID for the completed route (e.g., RT1065).<br>
+            <em>How it works?</em> Clickable link → opens the full route details for review.
+          </li>
+          <li>
+            <strong>3PL</strong><br>
+            <em>What is this?</em> The logistics company that assigned the job.<br>
+            <em>How it works?</em> Identifies who you worked for (e.g., G Logistics, KTI).
+          </li>
+          <li>
+            <strong>Truck</strong><br>
+            <em>What is this?</em> The truck that was used for the route.<br>
+            <em>How it works?</em> Confirms which vehicle completed the job.
+          </li>
+          <li>
+            <strong>Driver</strong><br>
+            <em>What is this?</em> The driver who completed the deliveries.<br>
+            <em>How it works?</em> Confirms responsibility and accountability for the route.
+          </li>
+          <li>
+            <strong>Final Rate Status (3PL/Contractor)</strong><br>
+            <em>What is this?</em> Shows whether the final rate has been agreed upon between you and the 3PL.<br>
+            <em>How it works?</em> If pending, it means the 3PL has not yet confirmed the final payment.
+          </li>
+          <li>
+            <strong>Est. Rate (Estimated Rate)</strong><br>
+            <em>What is this?</em> The original estimated payout for the route.<br>
+            <em>How it works?</em> Used as a reference to compare with the final rate.
+          </li>
+          <li>
+            <strong>Final Rate</strong><br>
+            <em>What is this?</em> The actual confirmed payout for the route.<br>
+            <em>How it works?</em> This is the amount you will be paid (after adjustments, if any).
+          </li>
+        </ul>
+      </div>
+      <div class="result">
+        Result: This screen shows only routes that are already completed. 
+        These routes are not pending — they are finished and waiting for invoicing or payment confirmation.
+      </div>
     </div>
 
     <!-- 9 -->
+    <!-- 9 -->
     <div class="section">
       <h2>🔹 9. My Cancelled Routes Screen</h2>
-      <div class="when-to-use"><strong>When to use:</strong><br>To track routes that were cancelled before completion.</div>
-      <div class="steps"><strong>Steps:</strong><ul>
-        <li>Use Search bar to find a cancelled route.</li>
-        <li>Filter by 3PL, Truck, or Driver.</li>
-        <li>Review details: Route No., 3PL, Truck, Driver, Warehouse, Route Status, Posted At.</li>
-      </ul></div>
-      <div class="result">Result: You can review cancelled routes for record-keeping.</div>
+      <div class="when-to-use">
+        <strong>When to use:</strong><br>
+        To track routes that were cancelled before completion.
+      </div>
+      <div class="steps">
+        <strong>Fields (with explanation):</strong>
+        <ul>
+          <li>
+            <strong>Actions</strong><br>
+            <em>What is this?</em> A menu (⋮ three dots) for each cancelled route.<br>
+            <em>How it works?</em> Lets you view details of the cancelled route, check why it was cancelled, or keep it for record-keeping.
+          </li>
+          <li>
+            <strong>Route No.</strong><br>
+            <em>What is this?</em> A unique ID for the cancelled route (e.g., RT1055).<br>
+            <em>How it works?</em> Clickable link → opens the route details, even though it was cancelled.
+          </li>
+          <li>
+            <strong>3PL</strong><br>
+            <em>What is this?</em> The logistics company that originally posted the job.<br>
+            <em>How it works?</em> Identifies which 3PL cancelled the job or for whom the job was cancelled.
+          </li>
+          <li>
+            <strong>Truck</strong><br>
+            <em>What is this?</em> The truck that was assigned to the route.<br>
+            <em>How it works?</em> Shows which vehicle was supposed to handle the job before cancellation.
+          </li>
+          <li>
+            <strong>Driver</strong><br>
+            <em>What is this?</em> The driver who was assigned to the route.<br>
+            <em>How it works?</em> Confirms who was scheduled to complete the job before it was cancelled.
+          </li>
+          <li>
+            <strong>Warehouse</strong><br>
+            <em>What is this?</em> The warehouse or starting point for the cancelled route.<br>
+            <em>How it works?</em> Identifies where the goods would have been picked up.
+          </li>
+          <li>
+            <strong>Route Status</strong><br>
+            <em>What is this?</em> The status of the route (e.g., Cancelled).<br>
+            <em>How it works?</em> Clearly shows that this job is no longer active or available.
+          </li>
+          <li>
+            <strong>Posted At</strong><br>
+            <em>What is this?</em> The date and time when the route was originally posted.<br>
+            <em>How it works?</em> Helps you track when the job was offered and later cancelled.
+          </li>
+        </ul>
+      </div>
+      <div class="result">
+        Result: This screen shows only routes that were cancelled. 
+        These routes are not active, not completed, and not pending — they are cancelled and closed.
+      </div>
     </div>
 
     <!-- 10 -->
+<!-- 10 -->
     <div class="section">
       <h2>🔹 10. My Requests Screen</h2>
-      <div class="when-to-use"><strong>When to use:</strong><br>To view requests you have submitted for routes.</div>
-      <div class="steps"><strong>Steps:</strong><ul>
-        <li>Use Search bar to find a request.</li>
-        <li>Filter by Date Range → From / To.</li>
-        <li>Review details: Route No., 3PL, Truck, Driver, Request Date, Status.</li>
-      </ul></div>
-      <div class="result">Result: You can track the status of your route requests.</div>
+      <div class="when-to-use">
+        <strong>When to use:</strong><br>
+        To view requests you have submitted for routes and check their status.
+      </div>
+      <div class="steps">
+        <strong>Fields (with explanation):</strong>
+        <ul>
+          <li>
+            <strong>Actions</strong><br>
+            <em>What is this?</em> A menu (⋮ three dots) for each request.<br>
+            <em>How it works?</em> Lets you view request details, cancel your request, or track updates.
+          </li>
+          <li>
+            <strong>Route</strong><br>
+            <em>What is this?</em> The route number you requested (e.g., RT1087).<br>
+            <em>How it works?</em> Clickable link → opens the full route details.
+          </li>
+          <li>
+            <strong>3PL</strong><br>
+            <em>What is this?</em> The logistics company that posted the route.<br>
+            <em>How it works?</em> Identifies who will approve or reject your request.
+          </li>
+          <li>
+            <strong>Truck</strong><br>
+            <em>What is this?</em> The truck you selected when submitting the request.<br>
+            <em>How it works?</em> Confirms which vehicle you offered for the job.
+          </li>
+          <li>
+            <strong>Driver</strong><br>
+            <em>What is this?</em> The driver you assigned to the request.<br>
+            <em>How it works?</em> Confirms who will operate the truck if the request is approved.
+          </li>
+          <li>
+            <strong>Request At</strong><br>
+            <em>What is this?</em> The date and time when you submitted the request.<br>
+            <em>How it works?</em> Helps you track when you applied for the job.
+          </li>
+          <li>
+            <strong>Status</strong><br>
+            <em>What is this?</em> The current state of your request (e.g., Pending, Approved, Rejected).<br>
+            <em>How it works?</em><br>
+            - Pending → waiting for 3PL to review.<br>
+            - Approved → request accepted, route moves to Active Routes.<br>
+            - Rejected → request declined, no action needed.
+          </li>
+        </ul>
+      </div>
+      <div class="result">
+        Result: This screen shows all the requests you have submitted. 
+        These requests are not yet confirmed until the 3PL approves them. 
+        They are pending to complete unless marked as Approved or Rejected.
+      </div>
     </div>
 
     <!-- 11 -->
+  <!-- 11 -->
     <div class="section">
       <h2>🔹 11. Route Logs Screen</h2>
-      <div class="when-to-use"><strong>When to use:</strong><br>To track the history of actions taken on your routes.</div>
-      <div class="steps"><strong>Steps:</strong><ul>
-        <li>Use Search bar to find a log.</li>
-        <li>Filter by Date Range → From / To.</li>
-        <li>Review details: Date, Route, Details, Action By.</li>
-      </ul></div>
-      <div class="result">Result: You can see a full history of route actions.</div>
+      <div class="when-to-use">
+        <strong>When to use:</strong><br>
+        To track the history of actions taken on your routes (who did what, and when).
+      </div>
+      <div class="steps">
+        <strong>Fields (with explanation):</strong>
+        <ul>
+          <li>
+            <strong>Date</strong><br>
+            <em>What is this?</em> The exact date and time when an action was performed.<br>
+            <em>How it works?</em> Every action (like route created, updated, cancelled, completed) is timestamped for record-keeping.<br>
+            <em>Example:</em> 9/1/2025 5:40 PM → means the action happened at that time.
+          </li>
+          <li>
+            <strong>Route</strong><br>
+            <em>What is this?</em> The route number (e.g., RT1087) associated with the action.<br>
+            <em>How it works?</em> Links the log entry to a specific route.
+          </li>
+          <li>
+            <strong>Details</strong><br>
+            <em>What is this?</em> A description of what happened.<br>
+            <em>How it works?</em> Explains the action in plain text (e.g., “Document Added: Insurance Certificate”, “Route Completed Successfully”).
+          </li>
+          <li>
+            <strong>Action Type</strong><br>
+            <em>What is this?</em> The category of the action (e.g., Document Added, Insurance Added, Driver Added, Route Cancelled, Route Completed).<br>
+            <em>How it works?</em> Groups actions into types so you can filter/search them easily.
+          </li>
+          <li>
+            <strong>Action By</strong><br>
+            <em>What is this?</em> The user or system that performed the action (e.g., Contractor, 3PL, System).<br>
+            <em>How it works?</em> Shows accountability — who made the change.
+          </li>
+        </ul>
+      </div>
+      <div class="result">
+        Result: This screen shows a record of all actions related to your routes. 
+        These are not active or pending routes — they are historical logs/records for tracking and auditing.
+      </div>
     </div>
 
     <!-- 12 -->
+    <!-- 12 -->
     <div class="section">
       <h2>🔹 12. Notifications Screen</h2>
-      <div class="when-to-use"><strong>When to use:</strong><br>To view system alerts, updates, and route notifications.</div>
-      <div class="steps"><strong>Steps:</strong><ul>
-        <li>Open the Notifications tab.</li>
-        <li>Review new alerts.</li>
-      </ul></div>
-      <div class="result">Result: You stay updated with system and route notifications.</div>
+      <div class="when-to-use">
+        <strong>When to use:</strong><br>
+        To view system alerts, updates, and route notifications in one place.
+      </div>
+      <div class="steps">
+        <strong>Fields/Features (with explanation):</strong>
+        <ul>
+          <li>
+            <strong>Notification List</strong><br>
+            <em>What is this?</em> A list of all notifications sent to your account.<br>
+            <em>How it works?</em> Each notification appears here with a short message (e.g., “New Route Available”, “Invoice Approved”, “Route Cancelled”).
+          </li>
+          <li>
+            <strong>Notification Type</strong><br>
+            <em>What is this?</em> The category of the notification (e.g., Route Update, Payment, System Alert).<br>
+            <em>How it works?</em> Helps you quickly identify what the notification is about.
+          </li>
+          <li>
+            <strong>Timestamp</strong><br>
+            <em>What is this?</em> The date and time when the notification was sent.<br>
+            <em>How it works?</em> Lets you know how recent or old the alert is.
+          </li>
+          <li>
+            <strong>Read/Unread Status</strong><br>
+            <em>What is this?</em> Shows whether you have opened the notification.<br>
+            <em>How it works?</em> Unread notifications are usually highlighted until you click them.
+          </li>
+          <li>
+            <strong>Click to View More</strong><br>
+            <em>What is this?</em> Clicking a notification opens the related screen (e.g., clicking “New Route Available” takes you to the Available Routes screen).<br>
+            <em>How it works?</em> Provides quick navigation to the action required.
+          </li>
+        </ul>
+      </div>
+      <div class="result">
+        Result: This screen shows alerts and updates only. 
+        Notifications are not active tasks — they are messages/alerts that guide you to take action in other screens 
+        (like accepting a route, checking an invoice, or updating availability).
+      </div>
     </div>
-  </div>
+
+<!-- 13 -->
 <!-- 13 -->
     <div class="section">
       <h2>🔹 13. My Availabilities Screen</h2>
-      <div class="when-to-use"><strong>When to use:</strong><br>To manage all your posted availabilities for trucks and drivers.</div>
-      <div class="steps"><strong>Steps:</strong><ul>
-        <li>Use filters: Date Range, Truck, Driver, Product Type.</li>
-        <li>Review details: Truck, Driver, Status, 3PL, Route, Availability Date, Product.</li>
-        <li>To add new availability → click + Post New Availability.</li>
-      </ul></div>
-      <div class="result">Result: You can manage and update your availability records.</div>
+      <div class="when-to-use">
+        <strong>When to use:</strong><br>
+        To manage all your posted availabilities for trucks and drivers.
+      </div>
+      <div class="steps">
+        <strong>Fields (with explanation):</strong>
+        <ul>
+          <li>
+            <strong>Actions</strong><br>
+            <em>What is this?</em> A menu (⋮ three dots) for each availability record.<br>
+            <em>How it works?</em> Lets you edit, update, or delete an availability.
+          </li>
+          <li>
+            <strong>Truck</strong><br>
+            <em>What is this?</em> The truck you made available (e.g., Man - Box 22ft).<br>
+            <em>How it works?</em> Shows which vehicle is free for jobs.
+          </li>
+          <li>
+            <strong>Driver</strong><br>
+            <em>What is this?</em> The driver assigned to the truck.<br>
+            <em>How it works?</em> Confirms who will operate the truck for this availability.
+          </li>
+          <li>
+            <strong>Status</strong><br>
+            <em>What is this?</em> The current state of the availability (e.g., Open, Reserved, Booked).<br>
+            <em>How it works?</em><br>
+            - Open → available for 3PLs to assign.<br>
+            - Reserved → matched with a 3PL but not yet started.<br>
+            - Booked → already assigned to a route.
+          </li>
+          <li>
+            <strong>3PL</strong><br>
+            <em>What is this?</em> The logistics company that reserved or booked the availability.<br>
+            <em>How it works?</em> Shows which 3PL is using your truck/driver. If empty, it means no one has booked it yet.
+          </li>
+          <li>
+            <strong>Route</strong><br>
+            <em>What is this?</em> The route number linked to this availability (if booked).<br>
+            <em>How it works?</em> Connects your availability to a specific job.
+          </li>
+          <li>
+            <strong>Availability Date</strong><br>
+            <em>What is this?</em> The date when the truck/driver is free.<br>
+            <em>How it works?</em> 3PLs can only assign jobs starting on or after this date.
+          </li>
+          <li>
+            <strong>Product</strong><br>
+            <em>What is this?</em> The type of goods you can transport (e.g., Furniture).<br>
+            <em>How it works?</em> Ensures you only get matched with jobs that fit your truck’s cargo type.
+          </li>
+          <li>
+            <strong>Location</strong><br>
+            <em>What is this?</em> The city, state, and ZIP code where the truck/driver is available.<br>
+            <em>How it works?</em> Routes are matched based on this location.
+          </li>
+        </ul>
+      </div>
+      <div class="result">
+        Result: This screen shows all the availabilities you have posted. 
+        If the status is Open, it means the truck/driver is still free. 
+        If the status is Reserved or Booked, it means the availability has already been matched with a 3PL or assigned to a route.
+      </div>
     </div>
 
+
     <!-- 14 -->
+  <!-- 14 -->
     <div class="section">
       <h2>🔹 14. My Calendar Screen</h2>
-      <div class="when-to-use"><strong>When to use:</strong><br>To view your availability and bookings in a calendar format.</div>
-      <div class="steps"><strong>Steps:</strong><ul>
-        <li>Switch between Day, Week, or Month view.</li>
-        <li>Use arrows to move between months.</li>
-        <li>Check availability status: Open (blue), Reserved (orange), Booked (red).</li>
-        <li>Click a date to view or manage availability.</li>
-      </ul></div>
-      <div class="result">Result: You can see your schedule and availability at a glance.</div>
+      <div class="when-to-use">
+        <strong>When to use:</strong><br>
+        To view your availability and bookings in a calendar format (Day, Week, or Month view).
+      </div>
+      <div class="steps">
+        <strong>Fields/Features (with explanation):</strong>
+        <ul>
+          <li>
+            <strong>Calendar View (Day / Week / Month)</strong><br>
+            <em>What is this?</em> Options to switch between daily, weekly, or monthly views.<br>
+            <em>How it works?</em><br>
+            - Day View → shows detailed availability for a single day.<br>
+            - Week View → shows all availabilities and bookings for the week.<br>
+            - Month View → gives a big-picture overview of the entire month.
+          </li>
+          <li>
+            <strong>Navigation Arrows</strong><br>
+            <em>What is this?</em> Buttons to move forward or backward in the calendar.<br>
+            <em>How it works?</em> Lets you check past or future availability dates.
+          </li>
+          <li>
+            <strong>Today Button</strong><br>
+            <em>What is this?</em> A quick shortcut to jump back to today’s date.<br>
+            <em>How it works?</em> Useful if you’ve navigated far into the past or future.
+          </li>
+          <li>
+            <strong>Availability Status Colors</strong><br>
+            <em>What is this?</em> Color-coded labels that show the status of each day.<br>
+            <em>How it works?</em><br>
+            - Open (Blue) → Truck/driver is available.<br>
+            - Reserved (Orange) → Availability has been reserved by a 3PL but not yet started.<br>
+            - Booked (Red) → Availability is already assigned to a route.
+          </li>
+          <li>
+            <strong>Click on a Date</strong><br>
+            <em>What is this?</em> Clicking a date opens the details of that day’s availability.<br>
+            <em>How it works?</em> You can view or edit the availability for that specific day.
+          </li>
+          <li>
+            <strong>Match Events Section (Legend)</strong><br>
+            <em>What is this?</em> A small guide showing what each color means (Open, Reserved, Booked).<br>
+            <em>How it works?</em> Helps you quickly understand the calendar without confusion.
+          </li>
+        </ul>
+      </div>
+      <div class="result">
+        Result: This screen shows availability status only (Open, Reserved, Booked). 
+        It does not show completed jobs — it’s focused on future planning and scheduling.
+      </div>
     </div>
 
     <!-- 15 -->
+ <!-- 15 -->
     <div class="section">
       <h2>🔹 15. Truck Requests Screen</h2>
-      <div class="when-to-use"><strong>When to use:</strong><br>To view and select trucks requested for availability.</div>
-      <div class="steps"><strong>Steps:</strong><ul>
-        <li>Go to Availability → Truck Requests.</li>
-        <li>Select a Truck from the list (e.g., Box 22ft).</li>
-      </ul></div>
-      <div class="result">Result: You can assign or manage requests for a specific truck.</div>
+      <div class="when-to-use">
+        <strong>When to use:</strong><br>
+        To view and manage requests from 3PLs that are asking for a specific truck in your fleet.
+      </div>
+      <div class="steps">
+        <strong>Fields/Features (with explanation):</strong>
+        <ul>
+          <li>
+            <strong>Truck List</strong><br>
+            <em>What is this?</em> A list of your trucks that are available for requests (e.g., Man Nbd - 526773 - Box 22ft).<br>
+            <em>How it works?</em> Each truck in your fleet is shown here. If a 3PL has requested that truck, it will appear in this list.
+          </li>
+          <li>
+            <strong>Truck Name / Model</strong><br>
+            <em>What is this?</em> The name or model of the truck (e.g., Man Nbd).<br>
+            <em>How it works?</em> Helps you identify which truck is being requested.
+          </li>
+          <li>
+            <strong>Truck ID (Internal System ID)</strong><br>
+            <em>What is this?</em> A unique number assigned to your truck in the system (e.g., 526773).<br>
+            <em>How it works?</em> Used by the system to track and match requests to the correct truck.
+          </li>
+          <li>
+            <strong>Truck Size / Type</strong><br>
+            <em>What is this?</em> The size of the truck (e.g., Box 22ft).<br>
+            <em>How it works?</em> 3PLs request trucks based on size/type. If a job requires a 22ft box truck, only trucks of that type will appear here.
+          </li>
+          <li>
+            <strong>Request Status</strong><br>
+            <em>What is this?</em> The current state of the request (e.g., Pending, Accepted, Declined).<br>
+            <em>How it works?</em><br>
+            - Pending → 3PL has requested your truck, waiting for your response.<br>
+            - Accepted → You approved the request, and the truck is now reserved.<br>
+            - Declined → You rejected the request, and the truck remains free.
+          </li>
+          <li>
+            <strong>Send Request / Accept Button</strong><br>
+            <em>What is this?</em> A button to confirm or respond to the request.<br>
+            <em>How it works?</em> Clicking it will either send your truck availability to the 3PL or accept their request.
+          </li>
+        </ul>
+      </div>
+      <div class="result">
+        Result: This screen shows which of your trucks are being requested by 3PLs. 
+        If you accept, the truck becomes reserved or booked for that 3PL. 
+        If you decline, the truck stays open and available for other jobs.
+      </div>
     </div>
 
     <!-- 16 -->
+ <!-- 16 -->
     <div class="section">
       <h2>🔹 16. My Earnings Screen</h2>
-      <div class="when-to-use"><strong>When to use:</strong><br>To track your estimated, finalized, and pending earnings.</div>
-      <div class="steps"><strong>Steps:</strong><ul>
-        <li>Go to Earnings & Invoices → My Earnings.</li>
-        <li>View Total Estimated Earnings (blue).</li>
-        <li>View Not Finalized Earnings (red).</li>
-        <li>View Finalized Earnings (green).</li>
-        <li>Use filters: Today, This Week, Last Week, This Month, Last Month, Custom.</li>
-      </ul></div>
-      <div class="result">Result: You can monitor your earnings over different time periods.</div>
+      <div class="when-to-use">
+        <strong>When to use:</strong><br>
+        To track your estimated, pending, and finalized earnings over different time periods.
+      </div>
+      <div class="steps">
+        <strong>Top Summary Boxes (with explanation):</strong>
+        <ul>
+          <li>
+            <strong>Total Estimated Earnings (Blue Box)</strong><br>
+            <em>What is this?</em> The total amount you are expected to earn based on all accepted routes (before adjustments).<br>
+            <em>How it works?</em> This is a calculated projection. It includes all active and completed routes, but the amounts may still change.<br>
+            <em>Important:</em> This is not guaranteed money — it’s an estimate.
+          </li>
+          <li>
+            <strong>Not Finalized Earnings (Red Box)</strong><br>
+            <em>What is this?</em> The total amount from completed routes that have not yet been finalized by the 3PL.<br>
+            <em>How it works?</em> After you complete a route, the 3PL must review and confirm the final rate. Until then, the money stays here.<br>
+            <em>Important:</em> This is pending money — you finished the work, but the 3PL hasn’t approved the final payment yet.
+          </li>
+          <li>
+            <strong>Finalized Earnings (Green Box)</strong><br>
+            <em>What is this?</em> The total amount that has been confirmed and finalized by the 3PL.<br>
+            <em>How it works?</em> Once the 3PL approves the final rate, the money moves here. This is the amount you can invoice and expect to be paid.<br>
+            <em>Important:</em> This is real money — confirmed and ready for invoicing/payment.
+          </li>
+        </ul>
+
+        <strong>Filters (with explanation):</strong>
+        <ul>
+          <li><strong>Today</strong><br><em>What is this?</em> Shows earnings for routes completed today.<br><em>How it works?</em> Useful for daily tracking.</li>
+          <li><strong>This Week</strong><br><em>What is this?</em> Shows earnings for the current week.<br><em>How it works?</em> Helps you track weekly performance.</li>
+          <li><strong>Last Week</strong><br><em>What is this?</em> Shows earnings from the previous week.<br><em>How it works?</em> Useful for comparing week-to-week progress.</li>
+          <li><strong>This Month</strong><br><em>What is this?</em> Shows earnings for the current month.<br><em>How it works?</em> Helps you track monthly income.</li>
+          <li><strong>Last Month</strong><br><em>What is this?</em> Shows earnings from the previous month.<br><em>How it works?</em> Useful for comparing month-to-month growth.</li>
+          <li><strong>Custom</strong><br><em>What is this?</em> Lets you select a custom date range.<br><em>How it works?</em> Useful for generating reports for accounting, taxes, or specific projects.</li>
+        </ul>
+
+        <strong>Earnings Table (with explanation):</strong>
+        <ul>
+          <li><strong>Route No.</strong><br><em>What is this?</em> The ID of the route that generated the earning.<br><em>How it works?</em> Clickable → opens the route details.</li>
+          <li><strong>3PL</strong><br><em>What is this?</em> The logistics company that paid for the route.<br><em>How it works?</em> Identifies who owes you the money.</li>
+          <li><strong>Truck / Driver</strong><br><em>What is this?</em> The truck and driver assigned to the route.<br><em>How it works?</em> Confirms which resources generated the income.</li>
+          <li><strong>Est. Rate (Estimated Rate)</strong><br><em>What is this?</em> The original estimated payout for the route.<br><em>How it works?</em> Used as a reference to compare with the final rate.</li>
+          <li><strong>Final Rate</strong><br><em>What is this?</em> The actual confirmed payout for the route.<br><em>How it works?</em> This is the amount you will be paid.</li>
+          <li><strong>Status</strong><br><em>What is this?</em> The payment status (Pending, Not Finalized, Finalized).<br><em>How it works?</em><br>
+            - Pending → route is active or just completed.<br>
+            - Not Finalized → waiting for 3PL approval.<br>
+            - Finalized → confirmed and ready for invoicing/payment.
+          </li>
+        </ul>
+      </div>
+      <div class="result">
+        Result: This screen shows all your earnings in one place. 
+        Estimated Earnings = projection (not guaranteed). 
+        Not Finalized Earnings = pending approval (work done, waiting for 3PL). 
+        Finalized Earnings = confirmed money (ready for invoicing/payment).
+      </div>
     </div>
 
     <!-- 17 -->
+   <!-- 17 -->
     <div class="section">
       <h2>🔹 17. Invoices Screen</h2>
-      <div class="when-to-use"><strong>When to use:</strong><br>To view and manage invoices for completed routes.</div>
-      <div class="steps"><strong>Steps:</strong><ul>
-        <li>Go to Earnings & Invoices → Invoices.</li>
-        <li>Use Filter Invoice By Type if needed.</li>
-        <li>Review details: Invoice No., Paid For, Issued Date, Due Date, Invoice Status, Transaction Status, Payment Direction.</li>
-      </ul></div>
-      <div class="result">Result: You can track and manage all your invoices.</div>
+      <div class="when-to-use">
+        <strong>When to use:</strong><br>
+        To view and manage invoices for completed routes, track payment status, and ensure you get paid correctly.
+      </div>
+      <div class="steps">
+        <strong>Fields (with explanation):</strong>
+        <ul>
+          <li>
+            <strong>Actions</strong><br>
+            <em>What is this?</em> A menu (⋮ three dots) for each invoice.<br>
+            <em>How it works?</em> Lets you view invoice details, download a copy (PDF/Excel), or send it to the 3PL.
+          </li>
+          <li>
+            <strong>Invoice No.</strong><br>
+            <em>What is this?</em> A unique ID assigned to each invoice (e.g., INV-2025-001).<br>
+            <em>How it works?</em> Used to track and reference invoices in the system and with 3PLs.
+          </li>
+          <li>
+            <strong>Paid For</strong><br>
+            <em>What is this?</em> The route or service that the invoice covers.<br>
+            <em>How it works?</em> Links the invoice to a specific completed route or multiple routes.
+          </li>
+          <li>
+            <strong>Issued Date</strong><br>
+            <em>What is this?</em> The date when the invoice was created.<br>
+            <em>How it works?</em> Marks the official start of the payment cycle.
+          </li>
+          <li>
+            <strong>Due Date</strong><br>
+            <em>What is this?</em> The deadline by which the 3PL must pay the invoice.<br>
+            <em>How it works?</em> Usually based on contract terms (e.g., Net 15, Net 30 → meaning 15 or 30 days after the issued date).
+          </li>
+          <li>
+            <strong>Invoice Status</strong><br>
+            <em>What is this?</em> The current state of the invoice (e.g., Pending, Sent, Approved, Paid, Overdue).<br>
+            <em>How it works?</em><br>
+            - Pending → invoice created but not yet sent.<br>
+            - Sent → invoice sent to 3PL, waiting for review.<br>
+            - Approved → 3PL accepted the invoice.<br>
+            - Paid → payment completed.<br>
+            - Overdue → payment not received by the due date.
+          </li>
+          <li>
+            <strong>Transaction Status</strong><br>
+            <em>What is this?</em> The financial processing state of the invoice.<br>
+            <em>How it works?</em> Shows whether the payment is in progress, completed, or failed.
+          </li>
+          <li>
+            <strong>Payment Direction</strong><br>
+            <em>What is this?</em> Indicates whether the payment is incoming (money owed to you) or outgoing (rare, but could be refunds/adjustments).<br>
+            <em>How it works?</em> For contractors, this is usually incoming.
+          </li>
+        </ul>
+      </div>
+      <div class="result">
+        Result: This screen shows all invoices linked to your completed routes. 
+        If the invoice is Pending or Sent, it means you are still waiting for payment. 
+        If the invoice is Approved or Paid, it means the money is confirmed or already received. 
+        If the invoice is Overdue, it means the 3PL has not paid on time, and you may need to follow up.
+      </div>
     </div>
 
     <!-- 18 -->
+  <!-- 18 -->
     <div class="section">
       <h2>🔹 18. Messages Screen</h2>
-      <div class="when-to-use"><strong>When to use:</strong><br>To communicate with the system or 3PL companies.</div>
-      <div class="steps"><strong>Steps:</strong><ul>
-        <li>Go to Messages & Issues → Messages.</li>
-        <li>Select General tab for normal messages.</li>
-        <li>Select Issues tab for issue-related messages.</li>
-        <li>Use the Search bar to find a message.</li>
-      </ul></div>
-      <div class="result">Result: You can send and receive messages related to your operations.</div>
+      <div class="when-to-use">
+        <strong>When to use:</strong><br>
+        To communicate with 3PL companies or receive system-generated messages about your routes, invoices, or issues.
+      </div>
+      <div class="steps">
+        <strong>Tabs & Fields (with explanation):</strong>
+        <ul>
+          <li>
+            <strong>General Tab</strong><br>
+            <em>What is this?</em> A section for normal communication.<br>
+            <em>How it works?</em> You can send and receive messages with 3PLs (like a chat or email inside the platform).<br>
+            <em>Example:</em> A 3PL might message you: “Please confirm if your driver can arrive earlier.” You can reply directly in this tab.
+          </li>
+          <li>
+            <strong>Issues Tab</strong><br>
+            <em>What is this?</em> A section for issue-related communication.<br>
+            <em>How it works?</em> If you raise an issue (e.g., damaged goods, late pickup, wrong address), the conversation about that issue appears here. Keeps issue-related messages separate from general chat.
+          </li>
+          <li>
+            <strong>Search Bar</strong><br>
+            <em>What is this?</em> A search box to find specific messages.<br>
+            <em>How it works?</em> You can type keywords (e.g., “invoice” or “route RT1087”) to quickly find related messages.
+          </li>
+        </ul>
+      </div>
+      <div class="steps">
+        <strong>Special Term: “Can communicate with system”</strong><br>
+        <em>What does it mean?</em> The system itself can send you automated messages (not from a human).<br>
+        <em>Examples:</em><br>
+        - “Your route RT1087 has been approved.”<br>
+        - “Invoice INV-2025-001 is overdue.”<br>
+        - “Driver Jihan Aras has been assigned to Route RT1092.”<br>
+        <em>How it works?</em> The system automatically generates these messages when certain actions happen. 
+        You cannot chat back with the system like a person, but you can take action in the platform (e.g., check the route, update availability).
+      </div>
+      <div class="result">
+        Result: This screen is your inbox inside the platform. 
+        You can communicate with 3PLs (human messages) and also receive system messages (automated alerts). 
+        It ensures all communication is centralized and linked to your routes, invoices, and issues.
+      </div>
     </div>
 
     <!-- 19 -->
+   <!-- 19 -->
     <div class="section">
       <h2>🔹 19. Issue Tracking Screen</h2>
-      <div class="when-to-use"><strong>When to use:</strong><br>To track issues raised for routes or operations.</div>
-      <div class="steps"><strong>Steps:</strong><ul>
-        <li>Go to Messages & Issues → Issue Tracking.</li>
-        <li>Use the Search bar to find an issue.</li>
-        <li>Review details: Issue Title, Issue Type, Route No., Raised By, Issue Status.</li>
-        <li>To raise a new issue → click Raise an Issue.</li>
-      </ul></div>
-      <div class="result">Result: You can monitor and follow up on all raised issues.</div>
+      <div class="when-to-use">
+        <strong>When to use:</strong><br>
+        To track issues raised for routes, deliveries, or system problems, and monitor their resolution status.
+      </div>
+      <div class="steps">
+        <strong>Fields (with explanation):</strong>
+        <ul>
+          <li>
+            <strong>Actions</strong><br>
+            <em>What is this?</em> A menu (⋮ three dots) for each issue.<br>
+            <em>How it works?</em> Lets you view full issue details, add comments, or close the issue if resolved.
+          </li>
+          <li>
+            <strong>Issue</strong><br>
+            <em>What is this?</em> The unique ID or reference for the issue.<br>
+            <em>How it works?</em> Used to track the issue in the system.
+          </li>
+          <li>
+            <strong>Issue Title</strong><br>
+            <em>What is this?</em> A short description of the problem (e.g., “Wrong delivery address”).<br>
+            <em>How it works?</em> Helps you quickly identify the issue without opening full details.
+          </li>
+          <li>
+            <strong>Issue Type</strong><br>
+            <em>What is this?</em> The category of the issue (e.g., Address, Damaged Goods, Late Delivery, Payment).<br>
+            <em>How it works?</em> Helps classify the issue so the right team (3PL, finance, support) can handle it.
+          </li>
+          <li>
+            <strong>Route No.</strong><br>
+            <em>What is this?</em> The route linked to the issue (e.g., RT1092).<br>
+            <em>How it works?</em> Connects the problem to a specific delivery job.
+          </li>
+          <li>
+            <strong>Raised By</strong><br>
+            <em>What is this?</em> The person or entity who reported the issue (e.g., Contractor, Driver, 3PL).<br>
+            <em>How it works?</em> Shows accountability — who flagged the problem.
+          </li>
+          <li>
+            <strong>Issue Status</strong><br>
+            <em>What is this?</em> The current state of the issue (e.g., Open, In Progress, Resolved, Closed).<br>
+            <em>How it works?</em><br>
+            - Open → issue reported, not yet worked on.<br>
+            - In Progress → someone is actively working on it.<br>
+            - Resolved → solution provided, waiting for confirmation.<br>
+            - Closed → issue fully completed and archived.
+          </li>
+        </ul>
+      </div>
+      <div class="result">
+        Result: This screen shows all issues raised in the system. 
+        If the status is Open or In Progress, the issue is active. 
+        If the status is Resolved or Closed, the issue is finished and stored as a record.
+      </div>
     </div>
 
     <!-- 20 -->
+<!-- 20 -->
     <div class="section">
       <h2>🔹 20. Raise an Issue Screen</h2>
-      <div class="when-to-use"><strong>When to use:</strong><br>To report a problem related to a route or system.</div>
-      <div class="steps"><strong>Steps:</strong><ul>
-        <li>Go to Messages & Issues → Raise an Issue.</li>
-        <li>Select Issue Type from dropdown.</li>
-        <li>Enter Issue Title.</li>
-        <li>Select the related Route.</li>
-        <li>Enter Issue Details.</li>
-        <li>Click Submit.</li>
-      </ul></div>
-      <div class="result">Result: Your issue is submitted and tracked in the system.</div>
+      <div class="when-to-use">
+        <strong>When to use:</strong><br>
+        To report a problem related to a route, delivery, or system issue.
+      </div>
+      <div class="steps">
+        <strong>Fields (with explanation):</strong>
+        <ul>
+          <li>
+            <strong>Issue Type</strong><br>
+            <em>What is this?</em> A dropdown to select the category of the issue (e.g., Address, Damaged Goods, Late Delivery, Payment, System Error).<br>
+            <em>How it works?</em> Helps classify the issue so it can be directed to the right team (operations, finance, support).
+          </li>
+          <li>
+            <strong>Issue Title</strong><br>
+            <em>What is this?</em> A short description of the problem (e.g., “Wrong delivery address provided”).<br>
+            <em>How it works?</em> Gives a quick summary so the 3PL/support team knows what the issue is about.
+          </li>
+          <li>
+            <strong>Route</strong><br>
+            <em>What is this?</em> A dropdown to select the route number linked to the issue (e.g., RT1092).<br>
+            <em>How it works?</em> Connects the issue to a specific delivery job, so the 3PL can investigate.
+          </li>
+          <li>
+            <strong>Issue Details</strong><br>
+            <em>What is this?</em> A text box to describe the problem in detail.<br>
+            <em>How it works?</em> You can explain what happened, when, and what support you need.<br>
+            <em>Example:</em> “Driver arrived at the address, but the customer refused delivery because the product was damaged.”
+          </li>
+          <li>
+            <strong>Submit Button</strong><br>
+            <em>What is this?</em> The button to create the issue.<br>
+            <em>How it works?</em> Once clicked, the issue is logged in the system and appears in the Issue Tracking Screen.
+          </li>
+        </ul>
+      </div>
+      <div class="steps">
+        <strong>Who can raise issues?</strong><br>
+        - Contractor (You) → If you face a problem with a route, payment, or system.<br>
+        - Driver → If the driver encounters an issue during delivery (e.g., customer not available, damaged goods).<br>
+        - 3PL (Logistics Company) → Sometimes the 3PL may raise an issue against a contractor (e.g., late arrival, incomplete delivery).<br><br>
+        <em>In your contractor portal, you (the contractor) or your assigned drivers are the main ones who raise issues. 
+        Once raised, the issue is visible to the 3PL and the system support team.</em>
+      </div>
+      <div class="result">
+        Result: This screen allows you to create new issues. 
+        Once submitted, the issue is logged, linked to a route, and tracked in the Issue Tracking Screen until it is resolved or closed.
+      </div>
     </div>
+<!-- 21 -->
 <!-- 21 -->
     <div class="section">
       <h2>🔹 21. Settings → Personal Details Screen</h2>
-      <div class="when-to-use"><strong>When to use:</strong><br>To update your personal account details.</div>
-      <div class="steps"><strong>Steps:</strong><ul>
-        <li>Go to Settings → Personal Details.</li>
-        <li>View or edit: First Name, Last Name, Email.</li>
-        <li>To make changes → click the Edit (pencil icon).</li>
-      </ul></div>
-      <div class="result">Result: Your personal details are updated.</div>
+      <div class="when-to-use">
+        <strong>When to use:</strong><br>
+        To view and update your personal account information (your identity as the contractor user).
+      </div>
+      <div class="steps">
+        <strong>Fields (with explanation):</strong>
+        <ul>
+          <li>
+            <strong>First Name</strong><br>
+            <em>What is this?</em> Your given name (e.g., Amir).<br>
+            <em>How it works?</em> Appears in your account profile and is used in communications with 3PLs.<br>
+            <em>Why it matters?</em> Ensures your account is personalized and identifiable.
+          </li>
+          <li>
+            <strong>Last Name</strong><br>
+            <em>What is this?</em> Your family name or surname (e.g., Osman).<br>
+            <em>How it works?</em> Appears alongside your first name in your profile and official records.<br>
+            <em>Why it matters?</em> Used for contracts, invoices, and compliance.
+          </li>
+          <li>
+            <strong>Email</strong><br>
+            <em>What is this?</em> The email address linked to your account (e.g., a..............com).<br>
+            <em>How it works?</em> Used for login, system notifications, and official communication with 3PLs.<br>
+            <em>Why it matters?</em> If this email is wrong, you may miss important updates.
+          </li>
+          <li>
+            <strong>Edit (Pencil Icon)</strong><br>
+            <em>What is this?</em> A button to update your personal details.<br>
+            <em>How it works?</em> Clicking it allows you to change your name or email.<br>
+            <em>Why it matters?</em> Keeps your account up to date if your contact info changes.
+          </li>
+        </ul>
+      </div>
+      <div class="result">
+        Result: This screen ensures your personal identity in the system is correct and up to date. 
+        It does not affect company details (that’s in the Company Details screen). 
+        It only affects your personal login and communication identity.
+      </div>
     </div>
 
-    <!-- 22 -->
+
+
+
+    <!-- 22-->
+   <!-- 22 -->
     <div class="section">
-      <h2>🔹 22. Settings → Company Details Screen</h2>
-      <div class="when-to-use"><strong>When to use:</strong><br>To manage company profile and compliance information.</div>
-      <div class="steps"><strong>Steps:</strong><ul>
-        <li>Go to Settings → Company Details.</li>
-        <li>Enter or update: Company Name, Owner’s Full Name, Company Email, Phone, Address, City, State, ZIP Code.</li>
-        <li>Enter compliance details: FEIN#, USMC#, USDOT#, USDOT Expiration Date.</li>
-        <li>Add Profile Description (optional).</li>
-        <li>Add or update MCP Permits → Number, Expiration, State.</li>
-      </ul></div>
-      <div class="result">Result: Your company profile and compliance records are saved.</div>
+      <h2>🔹 22. Insurance Details Screen</h2>
+      <div class="when-to-use">
+        <strong>When to use:</strong><br>
+        To add and manage your company’s insurance policies required for operating trucks and transporting goods in the U.S.
+      </div>
+      <div class="steps">
+        <strong>Insurance Types & Fields (with explanation):</strong>
+        <ul>
+          <li>
+            <strong>Automobile Liability</strong><br>
+            <em>What is this?</em> Insurance that covers damages or injuries caused by your truck in an accident.<br>
+            <em>How it works?</em> Required by law for all commercial trucks. Protects you if your truck damages property or injures someone.<br>
+            <em>Fields:</em> Company Name, Policy Number, Policy Limit, Expiration Date.
+          </li>
+          <li>
+            <strong>Cargo Coverage</strong><br>
+            <em>What is this?</em> Insurance that covers the goods you are transporting.<br>
+            <em>How it works?</em> If the cargo is damaged, lost, or stolen, this insurance pays for it. Required by most 3PLs.<br>
+            <em>Fields:</em> Company Name, Policy Number, Policy Limit, Expiration Date.
+          </li>
+          <li>
+            <strong>Commercial General Liability (CGL)</strong><br>
+            <em>What is this?</em> Insurance that covers accidents or damages that happen during your business operations (not just driving).<br>
+            <em>How it works?</em> Covers accidents at warehouses, slip-and-fall injuries, or property damage caused by your operations.<br>
+            <em>Fields:</em> Company Name, Policy Number, Policy Limit, Expiration Date.
+          </li>
+          <li>
+            <strong>Excess / Umbrella Liability</strong><br>
+            <em>What is this?</em> Extra insurance that provides coverage above your other policies.<br>
+            <em>How it works?</em> Example: If Auto Liability covers $1M but damages are $1.5M, Umbrella covers the extra $0.5M.<br>
+            <em>Fields:</em> Company Name, Policy Number, Policy Limit, Expiration Date.
+          </li>
+          <li>
+            <strong>Workers’ Compensation</strong><br>
+            <em>What is this?</em> Insurance that covers your employees (drivers, helpers) if they get injured on the job.<br>
+            <em>How it works?</em> Pays for medical bills, lost wages, and rehabilitation. Required in most U.S. states if you have employees.<br>
+            <em>Fields:</em> Company Name, Policy Number, Policy Limit, Expiration Date.
+          </li>
+        </ul>
+      </div>
+      <div class="result">
+        Result: This screen ensures your company has all required insurance policies uploaded and valid. 
+        Without valid insurance, many 3PLs will not assign you routes. 
+        Keeping this updated = compliance + trust + more jobs.
+      </div>
     </div>
 
-    <!-- 23 -->
+    <!-- 23-->
+   <!-- 23 -->
     <div class="section">
-      <h2>🔹 23. Insurance Details Screen</h2>
-      <div class="when-to-use"><strong>When to use:</strong><br>To manage insurance policies required for operations.</div>
-      <div class="steps"><strong>Steps:</strong><ul>
-        <li>Go to Settings → Insurance Details.</li>
-        <li>Add or update insurance types: Automobile Liability, Cargo Coverage, Commercial General Liability, Excess/Umbrella, Workers Compensation.</li>
-        <li>For each insurance, enter: Company Name, Policy Number, Policy Limit, Expiration Date.</li>
-      </ul></div>
-      <div class="result">Result: Your insurance details are stored for compliance and verification.</div>
+      <h2>🔹 23. Documents Screen</h2>
+      <div class="when-to-use">
+        <strong>When to use:</strong><br>
+        To upload and manage important company documents required for compliance, verification, and working with 3PLs.
+      </div>
+      <div class="steps">
+        <strong>Document Types & Fields (with explanation):</strong>
+        <ul>
+          <li>
+            <strong>Insurance Certificate</strong><br>
+            <em>What is this?</em> A document from your insurance company proving you have valid insurance (Auto Liability, Cargo, etc.).<br>
+            <em>How it works?</em> 3PLs require this before assigning you jobs. Confirms your trucks and cargo are insured.<br>
+            <em>Fields:</em> Upload File, Expiration Date.
+          </li>
+          <li>
+            <strong>Driver’s License</strong><br>
+            <em>What is this?</em> A copy of your driver’s license (or your drivers’ licenses).<br>
+            <em>How it works?</em> Confirms that the driver is legally allowed to operate a commercial vehicle.<br>
+            <em>Fields:</em> Upload File, Expiration Date.
+          </li>
+          <li>
+            <strong>Permits</strong><br>
+            <em>What is this?</em> Legal permits required to operate trucks in certain states (e.g., California MCP permit).<br>
+            <em>How it works?</em> Without valid permits, you cannot legally operate in some states. 3PLs may reject you if your permits are missing or expired.<br>
+            <em>Fields:</em> Upload File, Expiration Date.
+          </li>
+          <li>
+            <strong>IRS EIN (Employer Identification Number)</strong><br>
+            <em>What is this?</em> A number issued by the IRS (U.S. tax authority) to identify your business for taxes.<br>
+            <em>How it works?</em> Required for invoicing and tax reporting. Confirms your company is a legal business in the U.S.<br>
+            <em>Fields:</em> Upload File, Expiration Date.
+          </li>
+          <li>
+            <strong>W9 Form</strong><br>
+            <em>What is this?</em> A U.S. tax form that provides your company’s tax ID (EIN) to the 3PL.<br>
+            <em>How it works?</em> 3PLs need this form to pay you legally. Without it, they cannot process your payments.<br>
+            <em>Fields:</em> Upload File, Expiration Date.
+          </li>
+          <li>
+            <strong>Other Possible Documents</strong><br>
+            <em>What is this?</em> Additional compliance documents like MC Authority Letter, DOT Certificate, or state-specific permits.<br>
+            <em>How it works?</em> These may be required depending on your operating states and cargo type.<br>
+            <em>Fields:</em> Upload File, Expiration Date.
+          </li>
+        </ul>
+      </div>
+      <div class="result">
+        Result: This screen ensures your company has all compliance documents uploaded and valid. 
+        Without these, 3PLs will not trust or assign you jobs. 
+        Keeping them updated = legal compliance + faster approvals + more contracts.
+      </div>
     </div>
-
-    <!-- 24 -->
+    <!-- 24-->
+  <!-- 24 -->
     <div class="section">
-      <h2>🔹 24. Documents Screen</h2>
-      <div class="when-to-use"><strong>When to use:</strong><br>To upload and manage important company documents.</div>
-      <div class="steps"><strong>Steps:</strong><ul>
-        <li>Go to Settings → Documents.</li>
-        <li>Upload required documents: Insurance Certificate, Driver’s License, Permits, IRS EIN, W9 Form.</li>
-        <li>Enter Expiration Date for each document.</li>
-        <li>Save changes.</li>
-      </ul></div>
-      <div class="result">Result: Your compliance documents are uploaded and tracked.</div>
-    </div>
+      <h2>🔹 24. My Trucks Screen</h2>
+      <div class="when-to-use">
+        <strong>When to use:</strong><br>
+        To add, view, and manage all trucks in your fleet.
+      </div>
+      <div class="steps">
+        <strong>A. My Trucks – List View:</strong>
+        <ul>
+          <li><strong>Truck Name / Model</strong><br><em>What is this?</em> The name or model of the truck (e.g., Man Nbd Box 22ft).<br><em>How it works?</em> Helps you quickly identify each truck in your fleet.</li>
+          <li><strong>Truck Size</strong><br><em>What is this?</em> The size of the truck (e.g., Box 22ft, Box 26ft).<br><em>How it works?</em> Important for matching with 3PL route requirements.</li>
+          <li><strong>Status</strong><br><em>What is this?</em> The current state of the truck (Active, Inactive).<br><em>How it works?</em> Active → truck is available for jobs. Inactive → truck is not available.</li>
+          <li><strong>Add a New Truck Button</strong><br><em>What is this?</em> A button to add a new truck to your fleet.<br><em>How it works?</em> Opens the Truck Detail/Edit View.</li>
+        </ul>
 
+        <strong>B. My Trucks – Detail/Edit View (Add or Edit Truck):</strong>
+        <ul>
+          <li><strong>Make</strong><br><em>What is this?</em> The manufacturer of the truck (e.g., Man, Ford).<br><em>How it works?</em> Identifies the brand of the truck.</li>
+          <li><strong>Model</strong><br><em>What is this?</em> The specific model of the truck (e.g., Nbd, F-750).<br><em>How it works?</em> Helps distinguish between different types of trucks from the same manufacturer.</li>
+          <li><strong>Year</strong><br><em>What is this?</em> The year the truck was manufactured (e.g., 2018).<br><em>How it works?</em> Important for compliance and insurance.</li>
+          <li><strong>Truck Size</strong><br><em>What is this?</em> The cargo box size (e.g., Box 22ft).<br><em>How it works?</em> Determines what jobs the truck can be assigned to.</li>
+          <li><strong>Loading Option</strong><br><em>What is this?</em> The type of loading equipment (e.g., Ramp, Liftgate).<br><em>How it works?</em> Some jobs require specific loading options.</li>
+          <li><strong>Gross Vehicle Weight (GVW)</strong><br><em>What is this?</em> The maximum legal weight of the truck including cargo.<br><em>How it works?</em> Determines if the truck requires a CDL and what loads it can carry.</li>
+          <li><strong>Dimensions (Length, Width, Height in ft)</strong><br><em>What is this?</em> The cargo box dimensions.<br><em>How it works?</em> Used to calculate how much cargo can fit inside.</li>
+          <li><strong>Total Cube Capacity</strong><br><em>What is this?</em> The total cargo volume (Length × Width × Height).<br><em>How it works?</em> Helps 3PLs know if your truck can handle their load.</li>
+          <li><strong>VIN #</strong><br><em>What is this?</em> A unique 17-digit number assigned to every vehicle.<br><em>How it works?</em> Used for registration, insurance, and compliance.</li>
+          <li><strong>License Plate #</strong><br><em>What is this?</em> The truck’s license plate number.<br><em>How it works?</em> Identifies the truck legally on the road.</li>
+          <li><strong>Registration Expiration Date</strong><br><em>What is this?</em> The date when the truck’s registration expires.<br><em>How it works?</em> Must be renewed before this date to keep the truck legal.</li>
+          <li><strong>Status</strong><br><em>What is this?</em> The availability of the truck (Active, Inactive).<br><em>How it works?</em> Active → truck can be assigned to jobs. Inactive → truck is not available.</li>
+          <li><strong>Save Button</strong><br><em>What is this?</em> A button to save the truck details.<br><em>How it works?</em> Updates the system with the truck’s information.</li>
+        </ul>
+      </div>
+      <div class="result">
+        Result: This screen ensures your fleet is correctly registered in the system. 
+        If a truck is Active and valid, it can be matched with 3PL jobs. 
+        If a truck is Inactive or expired, it will not be available for assignments.
+      </div>
+    </div>
     <!-- 25 -->
+   <!-- 25 -->
     <div class="section">
-      <h2>🔹 25. My Trucks Screen</h2>
-      <div class="when-to-use"><strong>When to use:</strong><br>To manage trucks in your fleet.</div>
-      <div class="steps"><strong>Steps:</strong><ul>
-        <li>Go to Settings → My Trucks.</li>
-        <li>View existing trucks.</li>
-        <li>To add a new truck → click Add a New Truck.</li>
-        <li>Save changes.</li>
-      </ul></div>
-      <div class="result">Result: Your truck list is updated and available for route assignments.</div>
+      <h2>🔹 25. My Drivers Screen</h2>
+      <div class="when-to-use">
+        <strong>When to use:</strong><br>
+        To add, view, and manage drivers in your company. Each driver must have valid details to be assigned to routes.
+      </div>
+      <div class="steps">
+        <strong>Fields (with explanation):</strong>
+        <ul>
+          <li>
+            <strong>First Name</strong><br>
+            <em>What is this?</em> The driver’s given name (e.g., Jone).<br>
+            <em>How it works?</em> Appears in the system and on route assignments.
+          </li>
+          <li>
+            <strong>Last Name</strong><br>
+            <em>What is this?</em> The driver’s family name or surname (e.g., Aras).<br>
+            <em>How it works?</em> Used for identification in contracts, invoices, and compliance.
+          </li>
+          <li>
+            <strong>Phone #</strong><br>
+            <em>What is this?</em> The driver’s contact number (e.g., +1 (740) 226-0544).<br>
+            <em>How it works?</em> Used by 3PLs or dispatchers to contact the driver directly. Must be valid and reachable during deliveries.
+          </li>
+          <li>
+            <strong>Email</strong><br>
+            <em>What is this?</em> The driver’s email address.<br>
+            <em>How it works?</em> Optional in some cases, but useful for sending route details or confirmations.
+          </li>
+          <li>
+            <strong>Driver License #</strong><br>
+            <em>What is this?</em> The unique number on the driver’s license.<br>
+            <em>How it works?</em> Used to verify the driver’s legal ability to operate a truck. Must match the official government-issued license.
+          </li>
+          <li>
+            <strong>DL Issue State</strong><br>
+            <em>What is this?</em> The U.S. state that issued the driver’s license (e.g., AR = Arkansas).<br>
+            <em>How it works?</em> Each U.S. state has its own DMV. The state code shows where the license is valid.
+          </li>
+          <li>
+            <strong>License Expiration Date</strong><br>
+            <em>What is this?</em> The date when the driver’s license expires (e.g., 2025-08-08).<br>
+            <em>How it works?</em> Must be renewed before this date. If expired, the driver cannot legally drive.
+          </li>
+          <li>
+            <strong>Specialties</strong><br>
+            <em>What is this?</em> The type of cargo or jobs the driver is experienced with (e.g., Furniture, Electronics, Hazardous Materials).<br>
+            <em>How it works?</em> Helps match drivers to the right jobs.
+          </li>
+          <li>
+            <strong>Status</strong><br>
+            <em>What is this?</em> The driver’s availability in the system (Active, Inactive).<br>
+            <em>How it works?</em> Active → driver can be assigned to routes. Inactive → driver is not available.
+          </li>
+          <li>
+            <strong>Save Button</strong><br>
+            <em>What is this?</em> A button to save the driver’s details.<br>
+            <em>How it works?</em> Updates the system with the driver’s information.
+          </li>
+        </ul>
+      </div>
+      <div class="result">
+        Result: This screen ensures your drivers are correctly registered and compliant. 
+        If a driver is Active with a valid license, they can be assigned to jobs. 
+        If a driver is Inactive or has an expired license, they cannot be assigned until updated.
+      </div>
     </div>
 
     <!-- 26 -->
-    <div class="section">
-      <h2>🔹 26. My Drivers Screen</h2>
-      <div class="when-to-use"><strong>When to use:</strong><br>To manage drivers in your company.</div>
-      <div class="steps"><strong>Steps:</strong><ul>
-        <li>Go to Settings → My Drivers.</li>
-        <li>View existing drivers.</li>
-        <li>To add a new driver → click Add a New Driver.</li>
-        <li>Save changes.</li>
-      </ul></div>
-      <div class="result">Result: Your driver list is updated and available for assignments.</div>
-    </div>
-
-    <!-- 27 -->
     <div class="section">
       <h2>🔹 27. Subscription Plan Screen</h2>
       <div class="when-to-use"><strong>When to use:</strong><br>To select or change your subscription plan.</div>
@@ -454,19 +1516,74 @@
       </ul></div>
       <div class="result">Result: Your subscription plan is activated.</div>
     </div>
-<!-- 28 -->
+<!-- 27 -->
+  <!-- 28 -->
     <div class="section">
       <h2>🔹 28. Payment Options Screen</h2>
-      <div class="when-to-use"><strong>When to use:</strong><br>To set up or update payment details.</div>
-      <div class="steps"><strong>Steps:</strong><ul>
-        <li>Go to Settings → Payment Options.</li>
-        <li>Enter: Bank Name, Account Holder Name, Account Number, Routing Number, Account Type, Bank Address, City, State, ZIP Code.</li>
-        <li>Save changes.</li>
-      </ul></div>
-      <div class="result">Result: Your payment method is securely stored for transactions.</div>
+      <div class="when-to-use">
+        <strong>When to use:</strong><br>
+        To set up or update your company’s bank account details for receiving payments from 3PLs.
+      </div>
+      <div class="steps">
+        <strong>Fields (with explanation):</strong>
+        <ul>
+          <li>
+            <strong>Bank Name</strong><br>
+            <em>What is this?</em> The name of your bank (e.g., Bank of America, Wells Fargo).<br>
+            <em>How it works?</em> Identifies which bank will receive your payments.
+          </li>
+          <li>
+            <strong>Bank Address 1</strong><br>
+            <em>What is this?</em> The primary address of your bank branch.<br>
+            <em>How it works?</em> Used for verification and compliance. Some payment systems require the physical address of the bank branch where your account is held.
+          </li>
+          <li>
+            <strong>Bank Address 2</strong><br>
+            <em>What is this?</em> An additional address line (e.g., Suite number, PO Box, or secondary branch info).<br>
+            <em>How it works?</em> Sometimes international or corporate accounts require a second address line for clarity.<br>
+            <em>Why do we need two bank addresses?</em> Some banks have multiple address lines (street + suite/floor). For international payments, both addresses may be required to avoid errors. It ensures the payment system can uniquely identify your bank branch.
+          </li>
+          <li>
+            <strong>Account Holder Name</strong><br>
+            <em>What is this?</em> The legal name of the person or company that owns the account.<br>
+            <em>How it works?</em> Must match exactly with the name on your bank account. If it doesn’t match, payments may fail.
+          </li>
+          <li>
+            <strong>Account Number</strong><br>
+            <em>What is this?</em> The unique number of your bank account.<br>
+            <em>How it works?</em> Directs the payment into your specific account.<br>
+            <em>Important:</em> Double-check this — if wrong, money may go to the wrong account.
+          </li>
+          <li>
+            <strong>Routing Number</strong><br>
+            <em>What is this?</em> A 9-digit number used in the U.S. to identify your bank.<br>
+            <em>How it works?</em> Required for ACH and wire transfers. Example: 021000021 (Chase Bank).
+          </li>
+          <li>
+            <strong>Account Type</strong><br>
+            <em>What is this?</em> The type of bank account (Checking or Savings).<br>
+            <em>How it works?</em> Checking → most common for business payments. Savings → less common, usually for personal accounts.
+          </li>
+          <li>
+            <strong>City / State / ZIP Code</strong><br>
+            <em>What is this?</em> The location of your bank branch.<br>
+            <em>How it works?</em> Used for compliance and international transfers.
+          </li>
+          <li>
+            <strong>Save Button</strong><br>
+            <em>What is this?</em> A button to save your bank details.<br>
+            <em>How it works?</em> Updates the system with your payment information.
+          </li>
+        </ul>
+      </div>
+      <div class="result">
+        Result: This screen ensures your banking details are correct and verified. 
+        If all fields are correct, payments from 3PLs will go directly into your account. 
+        If details are wrong (especially Account Number, Routing Number, or Account Holder Name), payments may fail or be delayed.
+      </div>
     </div>
 
-    <!-- 29 -->
+    <!-- 28-->
     <div class="section">
       <h2>🔹 29. Account Logs Screen</h2>
       <div class="when-to-use"><strong>When to use:</strong><br>To view all actions taken in your account.</div>
@@ -477,56 +1594,219 @@
       <div class="result">Result: You can track all account activities for security and auditing.</div>
     </div>
 
-    <!-- 30 -->
+    <!-- 29-->
+    <!-- 29 -->
+    <div class="section">
+      <h2>🔹 29. Account Logs Screen</h2>
+      <div class="when-to-use">
+        <strong>When to use:</strong><br>
+        To view the full history of actions taken in your account (logins, updates, document uploads, etc.) for security and auditing.
+      </div>
+      <div class="steps">
+        <strong>Fields (with explanation):</strong>
+        <ul>
+          <li>
+            <strong>Date</strong><br>
+            <em>What is this?</em> The exact date and time when an action was performed.<br>
+            <em>How it works?</em> Every action is timestamped.<br>
+            <em>Example:</em> 9/1/2025 5:40 PM → means the action happened at that time.<br>
+            <em>Why it matters?</em> Helps you track when changes were made.
+          </li>
+          <li>
+            <strong>Action Type</strong><br>
+            <em>What is this?</em> The category of the action (e.g., Sign In, Profile Submitted, Document Added, Insurance Added, Driver Added).<br>
+            <em>How it works?</em> Groups actions into categories.<br>
+            <em>Example:</em> “Document Added” → means you uploaded a new file.<br>
+            <em>Why it matters?</em> Makes it easy to filter/search logs.
+          </li>
+          <li>
+            <strong>Details</strong><br>
+            <em>What is this?</em> A description of what exactly happened.<br>
+            <em>How it works?</em> Explains the action in plain text.<br>
+            <em>Example:</em> “Document W9-Form added” or “Insurance 62617 added”.<br>
+            <em>Why it matters?</em> Gives you the full story of the action.
+          </li>
+          <li>
+            <strong>Action By</strong><br>
+            <em>What is this?</em> The user or system that performed the action (e.g., Contractor, Driver, 3PL, System).<br>
+            <em>How it works?</em> Shows accountability — who made the change.<br>
+            <em>Example:</em> “Account” → means it was done by your account.<br>
+            <em>Why it matters?</em> Helps identify if the action was done by you, your driver, or automatically by the system.
+          </li>
+        </ul>
+      </div>
+      <div class="result">
+        Result: This screen shows a complete audit trail of your account. 
+        These are not active jobs — they are records of actions. 
+        Useful for security (who logged in), compliance (documents uploaded), and accountability (who made changes).
+      </div>
+    </div>
+
+    <!-- 30-->
+<!-- 30 -->
     <div class="section">
       <h2>🔹 30. Route Performance Report Screen</h2>
-      <div class="when-to-use"><strong>When to use:</strong><br>To analyze performance of all routes.</div>
-      <div class="steps"><strong>Steps:</strong><ul>
-        <li>Go to Reports → Route Performance.</li>
-        <li>View summary: Number of Routes, Planned Stops, Completed Stops, Completion Rates.</li>
-        <li>Use filters: Date Range, Warehouse, Status, Final Rate Status.</li>
-        <li>Export report if needed.</li>
-      </ul></div>
-      <div class="result">Result: You can measure and analyze route performance.</div>
+      <div class="when-to-use">
+        <strong>When to use:</strong><br>
+        To analyze the performance of all your routes — how many you completed, how many stops were done, and how much money you earned.
+      </div>
+      <div class="steps">
+        <strong>Top Summary Boxes (with explanation):</strong>
+        <ul>
+          <li><strong>Number of Routes</strong><br><em>What is this?</em> The total number of routes assigned to you.<br><em>How it works?</em> Counts all routes (Active, Completed, Cancelled).</li>
+          <li><strong>Planned Stops</strong><br><em>What is this?</em> The total number of delivery stops planned.<br><em>How it works?</em> Adds up all stops from all routes.</li>
+          <li><strong>Completed Stops</strong><br><em>What is this?</em> The number of stops you actually completed.<br><em>How it works?</em> Updates when a driver marks a stop as delivered.</li>
+          <li><strong>Completion Rate (%)</strong><br><em>What is this?</em> The percentage of planned stops that were completed.<br><em>How it works?</em> Formula: (Completed Stops ÷ Planned Stops) × 100.</li>
+        </ul>
+
+        <strong>Filters (with explanation):</strong>
+        <ul>
+          <li><strong>Filter by Date Range</strong><br><em>What is this?</em> Select a time period.<br><em>How it works?</em> Shows performance only for that period.</li>
+          <li><strong>Filter by Warehouse</strong><br><em>What is this?</em> Filter routes by warehouse ID or name.<br><em>How it works?</em> Useful if you work with multiple warehouses.</li>
+          <li><strong>Filter by Status</strong><br><em>What is this?</em> Filter by route status (Active, Completed, Cancelled).<br><em>How it works?</em> Helps you analyze only completed or only active jobs.</li>
+          <li><strong>Filter by Final Rate Status</strong><br><em>What is this?</em> Filter by payment status (Pending, Finalized).<br><em>How it works?</em> Useful for financial analysis.</li>
+        </ul>
+
+        <strong>Route Performance Table (with explanation):</strong>
+        <ul>
+          <li><strong>Route</strong><br><em>What is this?</em> The route number.<br><em>How it works?</em> Clickable → opens route details.</li>
+          <li><strong>Contractor</strong><br><em>What is this?</em> Your company name.<br><em>How it works?</em> Confirms which contractor handled the route.</li>
+          <li><strong>Truck</strong><br><em>What is this?</em> The truck assigned to the route.<br><em>How it works?</em> Shows which vehicle was used.</li>
+          <li><strong>Driver</strong><br><em>What is this?</em> The driver assigned to the route.<br><em>How it works?</em> Confirms who completed the deliveries.</li>
+          <li><strong>Route Status</strong><br><em>What is this?</em> The current state of the route (Active, Completed, Cancelled).<br><em>How it works?</em> Updates automatically as the route progresses.</li>
+          <li><strong>Final Rate Status</strong><br><em>What is this?</em> The payment status of the route (Pending, Finalized).<br><em>How it works?</em> Pending → waiting for 3PL approval. Finalized → confirmed and ready for invoicing.</li>
+          <li><strong>Est. Rate (Estimated Rate)</strong><br><em>What is this?</em> The expected payout for the route.<br><em>How it works?</em> Based on the original agreement before adjustments.</li>
+          <li><strong>Final Rate</strong><br><em>What is this?</em> The actual confirmed payout for the route.<br><em>How it works?</em> This is the amount you will be paid after adjustments.</li>
+        </ul>
+      </div>
+      <div class="result">
+        Result: This screen shows your route performance in numbers and money. 
+        If your Completion Rate is high, 3PLs will trust you more. 
+        If your Final Rate is lower than Est. Rate, it means adjustments were made (e.g., missed stops, penalties).
+      </div>
     </div>
 
     <!-- 31 -->
+ <!-- 31 -->
     <div class="section">
       <h2>🔹 31. My Driver Performance Report Screen</h2>
-      <div class="when-to-use"><strong>When to use:</strong><br>To analyze performance of individual drivers.</div>
-      <div class="steps"><strong>Steps:</strong><ul>
-        <li>Go to Reports → My Driver Performance.</li>
-        <li>View summary: Total Routes, Planned Stops, Completed Stops, Completion Rate.</li>
-        <li>Review driver details: Completed Routes, Completed Stops, Incomplete Stops, Driver Rating.</li>
-      </ul></div>
-      <div class="result">Result: You can evaluate driver performance and reliability.</div>
+      <div class="when-to-use">
+        <strong>When to use:</strong><br>
+        To analyze the performance of individual drivers — how many routes they completed, how many stops they missed, and their overall rating.
+      </div>
+      <div class="steps">
+        <strong>Top Summary Boxes (with explanation):</strong>
+        <ul>
+          <li><strong>Total Routes</strong><br><em>What is this?</em> The total number of routes assigned to the driver.<br><em>How it works?</em> Counts all jobs given to that driver.<br><em>Why it matters?</em> Shows how much work the driver handled.</li>
+          <li><strong>Planned Stops</strong><br><em>What is this?</em> The total number of delivery stops planned for the driver.<br><em>How it works?</em> Adds up all stops across all routes.<br><em>Why it matters?</em> Shows the expected workload.</li>
+          <li><strong>Total Completed Stops</strong><br><em>What is this?</em> The number of stops the driver successfully delivered.<br><em>How it works?</em> Updates when the driver marks a stop as delivered.<br><em>Why it matters?</em> Shows how reliable the driver is.</li>
+          <li><strong>Completion Rate (%)</strong><br><em>What is this?</em> The percentage of planned stops that the driver completed.<br><em>How it works?</em> Formula: (Completed Stops ÷ Planned Stops) × 100.<br><em>Why it matters?</em> A high completion rate = dependable driver. A low rate = missed deliveries.</li>
+        </ul>
+
+        <strong>Driver Performance Table (with explanation):</strong>
+        <ul>
+          <li><strong>Driver</strong><br><em>What is this?</em> The driver’s name (e.g., Jihan Aras).<br><em>How it works?</em> Identifies which driver the performance data belongs to.</li>
+          <li><strong>Completed Routes</strong><br><em>What is this?</em> The number of routes the driver finished.<br><em>How it works?</em> Increases when the driver completes all stops in a route.</li>
+          <li><strong>Completed Stops</strong><br><em>What is this?</em> The number of stops the driver successfully delivered.<br><em>How it works?</em> Updates when the driver marks deliveries as done.</li>
+          <li><strong>Incomplete Stops</strong><br><em>What is this?</em> The number of stops the driver failed to complete.<br><em>How it works?</em> Could be due to customer not available, wrong address, or driver error. Important for identifying performance issues.</li>
+          <li><strong>Driver Rating</strong><br><em>What is this?</em> A performance score (e.g., ⭐ 4.5/5).<br><em>How it works?</em> Calculated based on completion rate, timeliness, and sometimes 3PL/customer feedback. High rating = reliable driver. Low rating = needs improvement.</li>
+        </ul>
+      </div>
+      <div class="result">
+        Result: This screen shows how well each driver is performing. 
+        If a driver has high completion rate and rating, they are reliable. 
+        If a driver has many incomplete stops or low rating, you may need to provide training or assign them fewer jobs.
+      </div>
     </div>
 
-    <!-- 32 -->
+    <!-- 32-->
+   <!-- 32 -->
     <div class="section">
       <h2>🔹 32. Earnings Report Screen</h2>
-      <div class="when-to-use"><strong>When to use:</strong><br>To analyze earnings across all routes.</div>
-      <div class="steps"><strong>Steps:</strong><ul>
-        <li>Go to Reports → Earnings.</li>
-        <li>View summary: Total Routes, Total Not Approved Routes, Estimated Total Rate, Actual Final Rate, Variance.</li>
-        <li>Review details by route: Route No., Est. Rate, Act. Final Rate, Variance, Final Rate Status.</li>
-      </ul></div>
-      <div class="result">Result: You can compare estimated vs. actual earnings.</div>
+      <div class="when-to-use">
+        <strong>When to use:</strong><br>
+        To analyze your earnings across all routes, compare estimated vs. actual payouts, and track financial performance over time.
+      </div>
+      <div class="steps">
+        <strong>Top Summary Boxes (with explanation):</strong>
+        <ul>
+          <li><strong>Total Routes</strong><br><em>What is this?</em> The total number of routes included in the report.<br><em>How it works?</em> Counts all routes in the selected date range.</li>
+          <li><strong>Total Not Approved Routes</strong><br><em>What is this?</em> The number of routes completed but not yet approved by the 3PL.<br><em>How it works?</em> After you finish a route, the 3PL must review and approve it. Until then, it stays here.</li>
+          <li><strong>Est. Total Rate (Estimated Total Rate)</strong><br><em>What is this?</em> The total expected payout for all routes.<br><em>How it works?</em> Based on the original agreement when you accepted the route.</li>
+          <li><strong>Act. Total Final Rate (Actual Total Final Rate)</strong><br><em>What is this?</em> The total confirmed payout for all routes.<br><em>How it works?</em> After the 3PL reviews, this is the real money you will be paid.</li>
+          <li><strong>Variance</strong><br><em>What is this?</em> The difference between estimated and actual total.<br><em>How it works?</em> Formula: Final Rate – Estimated Rate. Positive = more money, Negative = less money.</li>
+        </ul>
+
+        <strong>Filters (with explanation):</strong>
+        <ul>
+          <li><strong>Filter by Date Range</strong><br><em>What is this?</em> Select a time period.<br><em>How it works?</em> Shows earnings only for that period.</li>
+          <li><strong>Filter by Warehouse</strong><br><em>What is this?</em> Filter earnings by warehouse ID or name.<br><em>How it works?</em> Useful if you work with multiple warehouses.</li>
+          <li><strong>Filter by Status</strong><br><em>What is this?</em> Filter by route status (Pending, Completed, Cancelled).<br><em>How it works?</em> Helps you analyze only completed jobs or pending ones.</li>
+          <li><strong>Filter by Final Rate Status</strong><br><em>What is this?</em> Filter by payment status (Pending, Finalized).<br><em>How it works?</em> Useful for financial tracking.</li>
+        </ul>
+
+        <strong>Earnings Report Table (with explanation):</strong>
+        <ul>
+          <li><strong>Route No.</strong><br><em>What is this?</em> The ID of the route.<br><em>How it works?</em> Clickable → opens route details.</li>
+          <li><strong>Est. Rate (Estimated Rate)</strong><br><em>What is this?</em> The expected payout for the route.<br><em>How it works?</em> Based on the original agreement.</li>
+          <li><strong>Act. Final Rate (Actual Final Rate)</strong><br><em>What is this?</em> The confirmed payout after the 3PL reviewed the job.<br><em>How it works?</em> This is the amount you will actually be paid.</li>
+          <li><strong>Variance</strong><br><em>What is this?</em> The difference between estimated and final rate.<br><em>How it works?</em> Positive = you earned more. Negative = you earned less.</li>
+          <li><strong>Final Rate Status</strong><br><em>What is this?</em> The payment status of the route (Pending, Finalized).<br><em>How it works?</em> Pending → waiting for 3PL approval. Finalized → confirmed and ready for invoicing/payment.</li>
+        </ul>
+      </div>
+      <div class="result">
+        Result: This screen shows your financial performance in detail. 
+        If your Variance is positive, you’re earning more than expected. 
+        If your Variance is negative, you’re losing money and need to investigate why. 
+        If you have many Not Approved Routes, your cash flow is at risk.
+      </div>
     </div>
 
-    <!-- 33 -->
+
+<!-- 33 -->
     <div class="section">
       <h2>🔹 33. Stop Performance Report Screen</h2>
-      <div class="when-to-use"><strong>When to use:</strong><br>To analyze stop-level performance.</div>
-      <div class="steps"><strong>Steps:</strong><ul>
-        <li>Go to Reports → Stop Performance.</li>
-        <li>View summary: Total Planned Stops, Total Completed Stops, Total Incomplete Stops, Total Delayed Stops.</li>
-        <li>Review reasons: Incomplete Reasons, Delay Reasons.</li>
-      </ul></div>
-      <div class="result">Result: You can track stop efficiency and identify problem areas.</div>
+      <div class="when-to-use">
+        <strong>When to use:</strong><br>
+        To analyze stop-level performance — how many stops were planned, completed, missed, or delayed, and why.
+      </div>
+      <div class="steps">
+        <strong>Top Summary Boxes (with explanation):</strong>
+        <ul>
+          <li><strong>Total Planned Stops</strong><br><em>What is this?</em> The total number of delivery stops planned.<br><em>How it works?</em> Adds up all stops from all routes.<br><em>Why it matters?</em> Shows the total workload.</li>
+          <li><strong>Total Completed Stops</strong><br><em>What is this?</em> The number of stops successfully delivered.<br><em>How it works?</em> Updates when a driver marks a stop as delivered.<br><em>Why it matters?</em> Shows how many deliveries were successful.</li>
+          <li><strong>Total Incomplete Stops</strong><br><em>What is this?</em> The number of stops that were not completed.<br><em>How it works?</em> Could be due to customer not available, wrong address, or driver error.<br><em>Why it matters?</em> Missed stops = unhappy customers + possible penalties.</li>
+          <li><strong>Total Delayed Stops</strong><br><em>What is this?</em> The number of stops delivered late.<br><em>How it works?</em> If a stop was scheduled for 10:00 AM but delivered at 12:00 PM, it counts as delayed.<br><em>Why it matters?</em> Delays affect customer satisfaction and 3PL trust.</li>
+        </ul>
+
+        <strong>Filters (with explanation):</strong>
+        <ul>
+          <li><strong>Filter by Date Range</strong><br><em>What is this?</em> Select a time period.<br><em>How it works?</em> Shows stop performance only for that period.</li>
+          <li><strong>Filter by Warehouse</strong><br><em>What is this?</em> Filter stops by warehouse ID or name.<br><em>How it works?</em> Useful if you work with multiple warehouses.</li>
+          <li><strong>Filter by Status</strong><br><em>What is this?</em> Filter by stop status (Completed, Incomplete, Delayed).<br><em>How it works?</em> Helps you focus on problem areas.</li>
+          <li><strong>Filter by Final Rate Status</strong><br><em>What is this?</em> Filter by payment status (Pending, Finalized).<br><em>How it works?</em> Useful for financial analysis of stops.</li>
+        </ul>
+
+        <strong>Stop Performance Details (with explanation):</strong>
+        <ul>
+          <li><strong>Incomplete Reasons</strong><br><em>What is this?</em> A list of reasons why stops were not completed.<br><em>How it works?</em> Examples: Customer not home, Wrong address, Refused delivery, Vehicle breakdown.<br><em>Why it matters?</em> Helps identify patterns in missed deliveries.</li>
+          <li><strong>Delay Reasons</strong><br><em>What is this?</em> A list of reasons why stops were delayed.<br><em>How it works?</em> Examples: Traffic jam, Weather, Late warehouse loading, Driver delay.<br><em>Why it matters?</em> Helps identify why deliveries are late.</li>
+        </ul>
+      </div>
+      <div class="result">
+        Result: This screen shows how well you are performing at the stop level. 
+        If you have many incomplete stops, you need to improve reliability. 
+        If you have many delayed stops, you need to improve time management. 
+        A high completed stops rate = strong performance and more trust from 3PLs.
+      </div>
     </div>
+
+
+
   <footer>
     <p>© 2025 Contractor Documentation | Built for GitHub Pages</p>
+
+
   </footer>
 </body>
 </html>
